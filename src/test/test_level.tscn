@@ -1,0 +1,73 @@
+[gd_scene format=3 uid="uid://drxx5n0p4yk35"]
+
+[ext_resource type="PackedScene" uid="uid://dcx485l8kim1l" path="res://src/test/player.tscn" id="1_eewff"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_ts572"]
+size = Vector3(60, 2, 60)
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_eewff"]
+data = PackedVector3Array(-30, 1, 30, 30, 1, 30, -30, -1, 30, 30, 1, 30, 30, -1, 30, -30, -1, 30, 30, 1, -30, -30, 1, -30, 30, -1, -30, -30, 1, -30, -30, -1, -30, 30, -1, -30, 30, 1, 30, 30, 1, -30, 30, -1, 30, 30, 1, -30, 30, -1, -30, 30, -1, 30, -30, 1, -30, -30, 1, 30, -30, -1, -30, -30, 1, 30, -30, -1, 30, -30, -1, -30, 30, 1, 30, -30, 1, 30, 30, 1, -30, -30, 1, 30, -30, 1, -30, 30, 1, -30, -30, -1, 30, 30, -1, 30, -30, -1, -30, 30, -1, 30, 30, -1, -30, -30, -1, -30)
+
+[sub_resource type="BoxMesh" id="BoxMesh_gh0ne"]
+size = Vector3(60, 10, 1)
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_5q4o7"]
+data = PackedVector3Array(-30, 5, 0.5, 30, 5, 0.5, -30, -5, 0.5, 30, 5, 0.5, 30, -5, 0.5, -30, -5, 0.5, 30, 5, -0.5, -30, 5, -0.5, 30, -5, -0.5, -30, 5, -0.5, -30, -5, -0.5, 30, -5, -0.5, 30, 5, 0.5, 30, 5, -0.5, 30, -5, 0.5, 30, 5, -0.5, 30, -5, -0.5, 30, -5, 0.5, -30, 5, -0.5, -30, 5, 0.5, -30, -5, -0.5, -30, 5, 0.5, -30, -5, 0.5, -30, -5, -0.5, 30, 5, 0.5, -30, 5, 0.5, 30, 5, -0.5, -30, 5, 0.5, -30, 5, -0.5, 30, 5, -0.5, -30, -5, 0.5, 30, -5, 0.5, -30, -5, -0.5, 30, -5, 0.5, 30, -5, -0.5, -30, -5, -0.5)
+
+[node name="Main" type="Node3D" unique_id=1255443144]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=2111739188]
+transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 15, 0)
+shadow_enabled = true
+
+[node name="Chao" type="MeshInstance3D" parent="." unique_id=524652031]
+mesh = SubResource("BoxMesh_ts572")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Chao" unique_id=1900315477]
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Chao/StaticBody3D" unique_id=111518867]
+shape = SubResource("ConcavePolygonShape3D_eewff")
+
+[node name="Parede" type="MeshInstance3D" parent="." unique_id=943580844]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.894187, -30.140697)
+mesh = SubResource("BoxMesh_gh0ne")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Parede" unique_id=1932635316]
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Parede/StaticBody3D" unique_id=744644460]
+shape = SubResource("ConcavePolygonShape3D_5q4o7")
+
+[node name="Parede2" type="MeshInstance3D" parent="." unique_id=1822217649]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -30.000002, 3.894187, -0.14069939)
+mesh = SubResource("BoxMesh_gh0ne")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Parede2" unique_id=97068097]
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Parede2/StaticBody3D" unique_id=8383404]
+shape = SubResource("ConcavePolygonShape3D_5q4o7")
+
+[node name="Parede3" type="MeshInstance3D" parent="." unique_id=360965144]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.9073486e-06, 3.894187, 29.8593)
+mesh = SubResource("BoxMesh_gh0ne")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Parede3" unique_id=1296478330]
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Parede3/StaticBody3D" unique_id=1586739548]
+shape = SubResource("ConcavePolygonShape3D_5q4o7")
+
+[node name="Parede4" type="MeshInstance3D" parent="." unique_id=1997237388]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 29.999996, 3.894187, -0.14070135)
+mesh = SubResource("BoxMesh_gh0ne")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Parede4" unique_id=1135970840]
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Parede4/StaticBody3D" unique_id=410313524]
+shape = SubResource("ConcavePolygonShape3D_5q4o7")
+
+[node name="Player" parent="." unique_id=32027707 instance=ExtResource("1_eewff")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6, 0)

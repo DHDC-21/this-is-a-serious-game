@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://dcx485l8kim1l"]
+
+[ext_resource type="Script" uid="uid://ddtcaxplncg0l" path="res://src/test/player.gd" id="1_lowyb"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_lowyb"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_gmfve"]
+
+[node name="Player" type="CharacterBody3D" unique_id=32027707]
+collision_layer = 2
+collision_mask = 3
+script = ExtResource("1_lowyb")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=899274384]
+shape = SubResource("CapsuleShape3D_lowyb")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1619141934]
+mesh = SubResource("CapsuleMesh_gmfve")
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=1986055893]
+transform = Transform3D(0.9991206, 0.020963969, -0.036310654, 0, 0.8660254, 0.5, 0.041927934, -0.49956033, 0.86526376, 0, 1.4821684, 1.5519831)
+
+[node name="RayCast3D" type="RayCast3D" parent="." unique_id=860121883]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, -4.371139e-08, 0)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1392047889]
+transform = Transform3D(1, 0, 0, 0, 0.8660254, 0.5, 0, -0.5, 0.8660254, 0, 1.9659258, 1.7411809)
