@@ -1,9 +1,11 @@
 [gd_scene format=3 uid="uid://dpy5urktkjcul"]
 
+[ext_resource type="Script" uid="uid://bt4ptncwhialj" path="res://src/ui/menu/main.gd" id="1_anfcr"]
 [ext_resource type="Theme" uid="uid://b4tf7yde8ime0" path="res://src/configs/main_menu.tres" id="1_m50lq"]
 
 [node name="Main" type="CanvasLayer" unique_id=1591354343]
 follow_viewport_enabled = true
+script = ExtResource("1_anfcr")
 
 [node name="Control" type="Control" parent="." unique_id=1967607401]
 layout_mode = 3
