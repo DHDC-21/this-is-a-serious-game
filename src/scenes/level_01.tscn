@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://csh2gk2361y6l"]
 
 [node name="Level01" type="CanvasLayer" unique_id=40986269]
+follow_viewport_enabled = true
 
 [node name="Content" type="Control" parent="." unique_id=1949185598]
 layout_mode = 3

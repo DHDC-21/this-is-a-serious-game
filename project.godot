@@ -11,13 +11,13 @@ config_version=5
 [application]
 
 config/name="This is serious game"
-run/main_scene="uid://drxx5n0p4yk35"
+run/main_scene="uid://dpy5urktkjcul"
 config/features=PackedStringArray("4.8", "GL Compatibility")
 config/icon="res://icon.svg"
 
 [autoload]
 
-DiscordRPCLoader="*uid://ctclbxei2td2h"
+DiscordRPCLoader="*res://addons/discord-rpc-gd/nodes/discord_autoload.gd"
 
 [display]
 
@@ -26,7 +26,7 @@ window/size/viewport_height=1920
 window/size/window_width_override=720
 window/size/window_height_override=1280
 window/stretch/mode="canvas_items"
-window/stretch/aspect="keep_width"
+window/stretch/aspect="expand"
 
 [dotnet]
 

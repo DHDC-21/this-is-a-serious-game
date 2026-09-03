@@ -68,9 +68,28 @@ size_flags_vertical = 3
 theme = ExtResource("1_m50lq")
 text = "Créditos"
 
+[node name="PopupSair" type="ConfirmationDialog" parent="Control/VBoxContainer/VBoxContainer/BtnCreditos" unique_id=2069910621]
+oversampling_override = 1.0
+mode = 3
+title = ""
+initial_position = 2
+size = Vector2i(1000, 400)
+visible = true
+max_size = Vector2i(1000, 16384)
+ok_button_text = "Sim"
+dialog_text = "Você tem certeza que deseja fechar o jogo?
+"
+dialog_autowrap = true
+cancel_button_text = "Não"
+
 [node name="BtnSair" type="Button" parent="Control/VBoxContainer/VBoxContainer" unique_id=553306780]
 custom_minimum_size = Vector2(0, 200)
 layout_mode = 2
 size_flags_vertical = 3
 theme = ExtResource("1_m50lq")
 text = "Sair"
+
+[connection signal="pressed" from="Control/VBoxContainer/VBoxContainer/BtnIniciar" to="." method="_on_btn_iniciar_pressed"]
+[connection signal="pressed" from="Control/VBoxContainer/VBoxContainer/BtnCreditos" to="." method="_on_btn_creditos_pressed"]
+[connection signal="confirmed" from="Control/VBoxContainer/VBoxContainer/BtnCreditos/PopupSair" to="." method="_on_popup_sair_confirmed"]
+[connection signal="pressed" from="Control/VBoxContainer/VBoxContainer/BtnSair" to="." method="_on_btn_sair_pressed"]
