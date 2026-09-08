@@ -36,12 +36,11 @@ theme_override_constants/margin_bottom = 64
 
 [node name="VBox" type="VBoxContainer" parent="Margem" unique_id=1637260006]
 layout_mode = 2
-theme_override_constants/separation = 24
+theme_override_constants/separation = 64
 
 [node name="Enunciado" type="Panel" parent="Margem/VBox" unique_id=811728551]
-custom_minimum_size = Vector2(0, 800)
+custom_minimum_size = Vector2(0, 600)
 layout_mode = 2
-size_flags_vertical = 3
 
 [node name="QuestionText" type="Label" parent="Margem/VBox/Enunciado" unique_id=641478957]
 custom_minimum_size = Vector2(0, 70)
@@ -80,82 +79,86 @@ expand = true
 
 [node name="QuestionAudio" type="AudioStreamPlayer" parent="Margem/VBox/Enunciado" unique_id=128026620]
 
-[node name="Alternativa1" type="HBoxContainer" parent="Margem/VBox" unique_id=1565665131]
+[node name="Alternativas" type="VBoxContainer" parent="Margem/VBox" unique_id=1299254073]
+layout_mode = 2
+theme_override_constants/separation = 32
+
+[node name="Alternativa1" type="HBoxContainer" parent="Margem/VBox/Alternativas" unique_id=1565665131]
 custom_minimum_size = Vector2(0, 128)
 layout_mode = 2
 theme_override_constants/separation = 16
 
-[node name="Label" type="Label" parent="Margem/VBox/Alternativa1" unique_id=1769409798]
+[node name="Label" type="Label" parent="Margem/VBox/Alternativas/Alternativa1" unique_id=1769409798]
 layout_mode = 2
 theme_override_font_sizes/font_size = 64
 text = "a."
 uppercase = true
 
-[node name="ButtonOption1" type="Button" parent="Margem/VBox/Alternativa1" unique_id=1439419702]
+[node name="ButtonOption1" type="Button" parent="Margem/VBox/Alternativas/Alternativa1" unique_id=1439419702]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="Alternativa2" type="HBoxContainer" parent="Margem/VBox" unique_id=775733344]
+[node name="Alternativa2" type="HBoxContainer" parent="Margem/VBox/Alternativas" unique_id=775733344]
 custom_minimum_size = Vector2(0, 128)
 layout_mode = 2
 theme_override_constants/separation = 16
 
-[node name="Label" type="Label" parent="Margem/VBox/Alternativa2" unique_id=1600297643]
+[node name="Label" type="Label" parent="Margem/VBox/Alternativas/Alternativa2" unique_id=1600297643]
 layout_mode = 2
 theme_override_font_sizes/font_size = 64
 text = "b."
 uppercase = true
 
-[node name="ButtonOption1" type="Button" parent="Margem/VBox/Alternativa2" unique_id=233787699]
+[node name="ButtonOption1" type="Button" parent="Margem/VBox/Alternativas/Alternativa2" unique_id=233787699]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="Alternativa3" type="HBoxContainer" parent="Margem/VBox" unique_id=1832872656]
+[node name="Alternativa3" type="HBoxContainer" parent="Margem/VBox/Alternativas" unique_id=1832872656]
 custom_minimum_size = Vector2(0, 128)
 layout_mode = 2
 theme_override_constants/separation = 16
 
-[node name="Label" type="Label" parent="Margem/VBox/Alternativa3" unique_id=549302316]
+[node name="Label" type="Label" parent="Margem/VBox/Alternativas/Alternativa3" unique_id=549302316]
 layout_mode = 2
 theme_override_font_sizes/font_size = 64
 text = "c."
 uppercase = true
 
-[node name="ButtonOption1" type="Button" parent="Margem/VBox/Alternativa3" unique_id=1541134669]
+[node name="ButtonOption1" type="Button" parent="Margem/VBox/Alternativas/Alternativa3" unique_id=1541134669]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="Alternativa4" type="HBoxContainer" parent="Margem/VBox" unique_id=2130114840]
+[node name="Alternativa4" type="HBoxContainer" parent="Margem/VBox/Alternativas" unique_id=2130114840]
 custom_minimum_size = Vector2(0, 128)
 layout_mode = 2
 theme_override_constants/separation = 16
 
-[node name="Label" type="Label" parent="Margem/VBox/Alternativa4" unique_id=736155050]
+[node name="Label" type="Label" parent="Margem/VBox/Alternativas/Alternativa4" unique_id=736155050]
 layout_mode = 2
 theme_override_font_sizes/font_size = 64
 text = "d."
 uppercase = true
 
-[node name="ButtonOption1" type="Button" parent="Margem/VBox/Alternativa4" unique_id=1334158272]
+[node name="ButtonOption1" type="Button" parent="Margem/VBox/Alternativas/Alternativa4" unique_id=1334158272]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="Alternativa5" type="HBoxContainer" parent="Margem/VBox" unique_id=1062946101]
+[node name="Alternativa5" type="HBoxContainer" parent="Margem/VBox/Alternativas" unique_id=1062946101]
 custom_minimum_size = Vector2(0, 128)
 layout_mode = 2
 theme_override_constants/separation = 16
 
-[node name="Label" type="Label" parent="Margem/VBox/Alternativa5" unique_id=1006606783]
+[node name="Label" type="Label" parent="Margem/VBox/Alternativas/Alternativa5" unique_id=1006606783]
 layout_mode = 2
 theme_override_font_sizes/font_size = 64
 text = "e."
 uppercase = true
 
-[node name="ButtonOption1" type="Button" parent="Margem/VBox/Alternativa5" unique_id=1983765987]
+[node name="ButtonOption1" type="Button" parent="Margem/VBox/Alternativas/Alternativa5" unique_id=1983765987]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3

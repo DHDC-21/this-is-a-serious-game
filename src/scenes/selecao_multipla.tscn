@@ -40,9 +40,8 @@ offset_transform_enabled = true
 theme_override_constants/separation = 24
 
 [node name="Enunciado" type="Panel" parent="Margem/VBox" unique_id=811728551]
-custom_minimum_size = Vector2(0, 800)
+custom_minimum_size = Vector2(0, 600)
 layout_mode = 2
-size_flags_vertical = 3
 
 [node name="QuestionText" type="Label" parent="Margem/VBox/Enunciado" unique_id=641478957]
 custom_minimum_size = Vector2(0, 70)
@@ -81,8 +80,52 @@ expand = true
 
 [node name="QuestionAudio" type="AudioStreamPlayer" parent="Margem/VBox/Enunciado" unique_id=128026620]
 
-[node name="ItemList" type="ItemList" parent="Margem/VBox" unique_id=702526268]
+[node name="Alternativas" type="VBoxContainer" parent="Margem/VBox" unique_id=895684813]
 layout_mode = 2
-size_flags_vertical = 3
-item_count = 2
-max_columns = 2
+
+[node name="Alternativa1" type="CheckBox" parent="Margem/VBox/Alternativas" unique_id=1546930032]
+custom_minimum_size = Vector2(0, 128)
+layout_mode = 2
+theme_override_constants/h_separation = 32
+theme_override_font_sizes/font_size = 32
+text = "alternativa"
+
+[node name="Alternativa2" type="CheckBox" parent="Margem/VBox/Alternativas" unique_id=358221878]
+custom_minimum_size = Vector2(0, 128)
+layout_mode = 2
+theme_override_constants/h_separation = 32
+theme_override_font_sizes/font_size = 32
+text = "alternativa"
+
+[node name="Alternativa3" type="CheckBox" parent="Margem/VBox/Alternativas" unique_id=1206882792]
+custom_minimum_size = Vector2(0, 128)
+layout_mode = 2
+theme_override_constants/h_separation = 32
+theme_override_font_sizes/font_size = 32
+text = "alternativa"
+
+[node name="Alternativa4" type="CheckBox" parent="Margem/VBox/Alternativas" unique_id=1921523631]
+custom_minimum_size = Vector2(0, 128)
+layout_mode = 2
+theme_override_constants/h_separation = 32
+theme_override_font_sizes/font_size = 32
+text = "alternativa"
+
+[node name="Alternativa5" type="CheckBox" parent="Margem/VBox/Alternativas" unique_id=555231710]
+custom_minimum_size = Vector2(0, 128)
+layout_mode = 2
+theme_override_constants/h_separation = 32
+theme_override_font_sizes/font_size = 32
+text = "alternativa"
+
+[node name="Feedback" type="TextEdit" parent="Margem/VBox" unique_id=1596740979]
+visible = false
+custom_minimum_size = Vector2(0, 128)
+layout_mode = 2
+placeholder_text = "o feedback aparecera aqui"
+
+[node name="Button" type="Button" parent="Margem/VBox" unique_id=1009739022]
+custom_minimum_size = Vector2(0, 128)
+layout_mode = 2
+theme_override_font_sizes/font_size = 64
+text = "Enviar Resposta"
