@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="QuizQuestion" format=3 uid="uid://c3bewa1f1pf7t"]
+
+[ext_resource type="Script" uid="uid://dvpw0g3ik34s3" path="res://src/scripts/resources/question.gd" id="1_po6sa"]
+
+[resource]
+script = ExtResource("1_po6sa")
+question_info = "Qual ou quais desses atores são os representantes do grupo de trabalho que participam da reposta contra o desastre?"
+question_type = 3
+question_choices = Array[String](["Defesa Cívil", "Prefeitura", "Empresas de Tecnologia", "Governo Estadual", "Órgãos de Proteção", "Instituições de Ensino Superior"])
+metadata/_custom_type_script = "uid://dvpw0g3ik34s3"

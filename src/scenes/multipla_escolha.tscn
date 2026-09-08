@@ -1,0 +1,161 @@
+[gd_scene format=3 uid="uid://csh2gk2361y6l"]
+
+[ext_resource type="Script" uid="uid://crt8imb7gatm1" path="res://src/scripts/controllers/game_controller.gd" id="1_72oag"]
+[ext_resource type="Script" uid="uid://c0nvrpnmbr6c0" path="res://src/scripts/resources/theme.gd" id="2_krxow"]
+[ext_resource type="Script" uid="uid://dvpw0g3ik34s3" path="res://src/scripts/resources/question.gd" id="3_1fcwu"]
+[ext_resource type="Resource" uid="uid://c3bewa1f1pf7t" path="res://src/resources/questions/atores_do_gt.tres" id="4_qgpcu"]
+[ext_resource type="Resource" uid="uid://bjv308eyo8mto" path="res://src/resources/questions/representantes_do_gt.tres" id="5_qe5qc"]
+[ext_resource type="Resource" uid="uid://ck2onm6ul4x07" path="res://src/resources/questions/cenarios_de_risco.tres" id="6_orf4v"]
+[ext_resource type="Resource" uid="uid://c2h1gjrdlhm0n" path="res://src/resources/questions/cenarios_de_risco_em_mogi_mirm.tres" id="7_bjw7y"]
+[ext_resource type="Resource" uid="uid://rdels2adrdey" path="res://src/resources/questions/momentos_de_atuacao_da_defesa_civil.tres" id="8_qqo1y"]
+
+[sub_resource type="Resource" id="Resource_5eosi"]
+script = ExtResource("2_krxow")
+theme = Array[ExtResource("3_1fcwu")]([ExtResource("4_qgpcu"), ExtResource("5_qe5qc"), ExtResource("6_orf4v"), ExtResource("7_bjw7y"), ExtResource("8_qqo1y")])
+metadata/_custom_type_script = "uid://c0nvrpnmbr6c0"
+
+[node name="Level01" type="CanvasLayer" unique_id=40986269]
+follow_viewport_enabled = true
+script = ExtResource("1_72oag")
+quiz = SubResource("Resource_5eosi")
+color_right = Color(0.6318803, 0.8288257, 0.39260975, 1)
+color_wrong = Color(0.77621365, 0.3064303, 0.3064303, 1)
+
+[node name="Margem" type="MarginContainer" parent="." unique_id=823143529]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/margin_left = 64
+theme_override_constants/margin_top = 64
+theme_override_constants/margin_right = 64
+theme_override_constants/margin_bottom = 64
+
+[node name="VBox" type="VBoxContainer" parent="Margem" unique_id=1637260006]
+layout_mode = 2
+theme_override_constants/separation = 24
+
+[node name="Enunciado" type="Panel" parent="Margem/VBox" unique_id=811728551]
+custom_minimum_size = Vector2(0, 800)
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="QuestionText" type="Label" parent="Margem/VBox/Enunciado" unique_id=641478957]
+custom_minimum_size = Vector2(0, 70)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 6
+theme_override_font_sizes/font_size = 64
+text = "pergunta"
+horizontal_alignment = 1
+vertical_alignment = 1
+text_overrun_behavior = 1
+uppercase = true
+
+[node name="QuestionImage" type="TextureRect" parent="Margem/VBox/Enunciado" unique_id=1766605673]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 1
+stretch_mode = 5
+
+[node name="QuestionVideo" type="VideoStreamPlayer" parent="Margem/VBox/Enunciado" unique_id=1747714895]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+expand = true
+
+[node name="QuestionAudio" type="AudioStreamPlayer" parent="Margem/VBox/Enunciado" unique_id=128026620]
+
+[node name="Alternativa1" type="HBoxContainer" parent="Margem/VBox" unique_id=1565665131]
+custom_minimum_size = Vector2(0, 128)
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="Label" type="Label" parent="Margem/VBox/Alternativa1" unique_id=1769409798]
+layout_mode = 2
+theme_override_font_sizes/font_size = 64
+text = "a."
+uppercase = true
+
+[node name="ButtonOption1" type="Button" parent="Margem/VBox/Alternativa1" unique_id=1439419702]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Alternativa2" type="HBoxContainer" parent="Margem/VBox" unique_id=775733344]
+custom_minimum_size = Vector2(0, 128)
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="Label" type="Label" parent="Margem/VBox/Alternativa2" unique_id=1600297643]
+layout_mode = 2
+theme_override_font_sizes/font_size = 64
+text = "b."
+uppercase = true
+
+[node name="ButtonOption1" type="Button" parent="Margem/VBox/Alternativa2" unique_id=233787699]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Alternativa3" type="HBoxContainer" parent="Margem/VBox" unique_id=1832872656]
+custom_minimum_size = Vector2(0, 128)
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="Label" type="Label" parent="Margem/VBox/Alternativa3" unique_id=549302316]
+layout_mode = 2
+theme_override_font_sizes/font_size = 64
+text = "c."
+uppercase = true
+
+[node name="ButtonOption1" type="Button" parent="Margem/VBox/Alternativa3" unique_id=1541134669]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Alternativa4" type="HBoxContainer" parent="Margem/VBox" unique_id=2130114840]
+custom_minimum_size = Vector2(0, 128)
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="Label" type="Label" parent="Margem/VBox/Alternativa4" unique_id=736155050]
+layout_mode = 2
+theme_override_font_sizes/font_size = 64
+text = "d."
+uppercase = true
+
+[node name="ButtonOption1" type="Button" parent="Margem/VBox/Alternativa4" unique_id=1334158272]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Alternativa5" type="HBoxContainer" parent="Margem/VBox" unique_id=1062946101]
+custom_minimum_size = Vector2(0, 128)
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="Label" type="Label" parent="Margem/VBox/Alternativa5" unique_id=1006606783]
+layout_mode = 2
+theme_override_font_sizes/font_size = 64
+text = "e."
+uppercase = true
+
+[node name="ButtonOption1" type="Button" parent="Margem/VBox/Alternativa5" unique_id=1983765987]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3

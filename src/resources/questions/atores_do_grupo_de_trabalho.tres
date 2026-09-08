@@ -1,9 +1,0 @@
-[gd_resource type="Resource" script_class="QuizQuestion" format=3 uid="uid://bjv308eyo8mto"]
-
-[ext_resource type="Script" uid="uid://dvpw0g3ik34s3" path="res://src/scripts/resources/question.gd" id="1_7gghh"]
-
-[resource]
-script = ExtResource("1_7gghh")
-question_info = "Com base no que foi aprendido,"
-question_choices = Array[String](["", "", "", "", ""])
-metadata/_custom_type_script = "uid://dvpw0g3ik34s3"

@@ -1,7 +1,25 @@
-[gd_scene format=3 uid="uid://csh2gk2361y6l"]
+[gd_scene format=3 uid="uid://d4m86hvisgna8"]
+
+[ext_resource type="Script" uid="uid://crt8imb7gatm1" path="res://src/scripts/controllers/game_controller.gd" id="1_pqc21"]
+[ext_resource type="Script" uid="uid://c0nvrpnmbr6c0" path="res://src/scripts/resources/theme.gd" id="2_3ddab"]
+[ext_resource type="Script" uid="uid://dvpw0g3ik34s3" path="res://src/scripts/resources/question.gd" id="3_l5bjw"]
+[ext_resource type="Resource" uid="uid://c3bewa1f1pf7t" path="res://src/resources/questions/atores_do_gt.tres" id="4_ygcxf"]
+[ext_resource type="Resource" uid="uid://bjv308eyo8mto" path="res://src/resources/questions/representantes_do_gt.tres" id="5_yrcdl"]
+[ext_resource type="Resource" uid="uid://ck2onm6ul4x07" path="res://src/resources/questions/cenarios_de_risco.tres" id="6_jsa0y"]
+[ext_resource type="Resource" uid="uid://c2h1gjrdlhm0n" path="res://src/resources/questions/cenarios_de_risco_em_mogi_mirm.tres" id="7_7xvjb"]
+[ext_resource type="Resource" uid="uid://rdels2adrdey" path="res://src/resources/questions/momentos_de_atuacao_da_defesa_civil.tres" id="8_amg4u"]
+
+[sub_resource type="Resource" id="Resource_5eosi"]
+script = ExtResource("2_3ddab")
+theme = Array[ExtResource("3_l5bjw")]([ExtResource("4_ygcxf"), ExtResource("5_yrcdl"), ExtResource("6_jsa0y"), ExtResource("7_7xvjb"), ExtResource("8_amg4u")])
+metadata/_custom_type_script = "uid://c0nvrpnmbr6c0"
 
 [node name="Level01" type="CanvasLayer" unique_id=40986269]
 follow_viewport_enabled = true
+script = ExtResource("1_pqc21")
+quiz = SubResource("Resource_5eosi")
+color_right = Color(0.6318803, 0.8288257, 0.39260975, 1)
+color_wrong = Color(0.77621365, 0.3064303, 0.3064303, 1)
 
 [node name="Content" type="Control" parent="." unique_id=1949185598]
 layout_mode = 3
@@ -29,6 +47,7 @@ theme_override_font_sizes/font_size = 64
 text = "pergunta"
 horizontal_alignment = 1
 vertical_alignment = 1
+text_overrun_behavior = 1
 uppercase = true
 
 [node name="QuestionHolder" type="Panel" parent="Content/QuestionInfo" unique_id=811728551]
