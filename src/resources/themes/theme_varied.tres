@@ -1,11 +1,11 @@
 [gd_resource type="Resource" script_class="QuizTheme" format=3 uid="uid://cfyra5ah0qg5g"]
 
-[ext_resource type="Script" uid="uid://c0nvrpnmbr6c0" path="res://src/scripts/resources/theme.gd" id="1_bft8b"]
-[ext_resource type="Script" uid="uid://dvpw0g3ik34s3" path="res://src/scripts/resources/question.gd" id="2_bb3gt"]
-[ext_resource type="Resource" uid="uid://c3bewa1f1pf7t" path="res://src/resources/questions/atores_do_gt.tres" id="3_71kef"]
-[ext_resource type="Resource" uid="uid://ck2onm6ul4x07" path="res://src/resources/questions/cenarios_de_risco.tres" id="4_5cbjt"]
+[ext_resource type="Script" uid="uid://c0nvrpnmbr6c0" path="res://src/scripts/resources/quiz_theme.gd" id="1_bft8b"]
+[ext_resource type="Script" uid="uid://dvpw0g3ik34s3" path="res://src/scripts/resources/quiz_question.gd" id="2_bb3gt"]
+[ext_resource type="Resource" uid="uid://bjv308eyo8mto" path="res://src/resources/questions/representantes_GT_ME.tres" id="3_bft8b"]
+[ext_resource type="Resource" uid="uid://c3bewa1f1pf7t" path="res://src/resources/questions/representantes_GT_SM.tres" id="4_bb3gt"]
 
 [resource]
 script = ExtResource("1_bft8b")
-theme = Array[ExtResource("2_bb3gt")]([ExtResource("3_71kef"), ExtResource("4_5cbjt")])
+theme = Array[ExtResource("2_bb3gt")]([ExtResource("3_bft8b"), ExtResource("4_bb3gt")])
 metadata/_custom_type_script = "uid://c0nvrpnmbr6c0"

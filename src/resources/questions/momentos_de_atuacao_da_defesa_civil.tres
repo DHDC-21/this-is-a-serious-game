@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="QuizQuestion" format=3 uid="uid://rdels2adrdey"]
 
-[ext_resource type="Script" uid="uid://dvpw0g3ik34s3" path="res://src/scripts/resources/question.gd" id="1_1wydh"]
+[ext_resource type="Script" uid="uid://dvpw0g3ik34s3" path="res://src/scripts/resources/quiz_question.gd" id="1_1wydh"]
 
 [resource]
 script = ExtResource("1_1wydh")

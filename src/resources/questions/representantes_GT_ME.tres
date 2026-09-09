@@ -1,9 +1,9 @@
 [gd_resource type="Resource" script_class="QuizQuestion" format=3 uid="uid://bjv308eyo8mto"]
 
-[ext_resource type="Script" uid="uid://dvpw0g3ik34s3" path="res://src/scripts/resources/question.gd" id="1_8gvgc"]
+[ext_resource type="Script" uid="uid://dvpw0g3ik34s3" path="res://src/scripts/resources/quiz_question.gd" id="1_qnjad"]
 
 [resource]
-script = ExtResource("1_8gvgc")
+script = ExtResource("1_qnjad")
 question_info = "Com base no que foi aprendido,"
 question_choices = Array[String](["Defesa Cívil, Prefeitura, Escolas, Igrejas", "Defesa Civil, Órgãos de Proteção, Bombeiros", "Defesa Cívil, Prefeitura, Policia Cívil, Bombeiros", "Defesa Cívil, Governo Federal, Governo Estadual e Prefeitura", "Defesa Cívil, Policia Militar, Bombeiros, Empresas Locais"])
 question_answer = "Defesa Civil, Órgãos de Proteção, Bombeiros"

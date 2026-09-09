@@ -1,23 +1,27 @@
 [gd_scene format=3 uid="uid://csh2gk2361y6l"]
 
 [ext_resource type="Script" uid="uid://crt8imb7gatm1" path="res://src/scripts/controllers/game_controller.gd" id="1_72oag"]
-[ext_resource type="Script" uid="uid://c0nvrpnmbr6c0" path="res://src/scripts/resources/theme.gd" id="2_krxow"]
-[ext_resource type="Script" uid="uid://dvpw0g3ik34s3" path="res://src/scripts/resources/question.gd" id="3_1fcwu"]
-[ext_resource type="Resource" uid="uid://c3bewa1f1pf7t" path="res://src/resources/questions/atores_do_gt.tres" id="4_qgpcu"]
-[ext_resource type="Resource" uid="uid://bjv308eyo8mto" path="res://src/resources/questions/representantes_do_gt.tres" id="5_qe5qc"]
-[ext_resource type="Resource" uid="uid://ck2onm6ul4x07" path="res://src/resources/questions/cenarios_de_risco.tres" id="6_orf4v"]
-[ext_resource type="Resource" uid="uid://c2h1gjrdlhm0n" path="res://src/resources/questions/cenarios_de_risco_em_mogi_mirm.tres" id="7_bjw7y"]
-[ext_resource type="Resource" uid="uid://rdels2adrdey" path="res://src/resources/questions/momentos_de_atuacao_da_defesa_civil.tres" id="8_qqo1y"]
+[ext_resource type="Script" uid="uid://c0nvrpnmbr6c0" path="res://src/scripts/resources/quiz_theme.gd" id="2_krxow"]
+[ext_resource type="Script" uid="uid://dvpw0g3ik34s3" path="res://src/scripts/resources/quiz_question.gd" id="3_1fcwu"]
+[ext_resource type="Resource" uid="uid://c3bewa1f1pf7t" path="res://src/resources/questions/representantes_GT_SM.tres" id="4_wyhl6"]
+[ext_resource type="Resource" uid="uid://bjv308eyo8mto" path="res://src/resources/questions/representantes_GT_ME.tres" id="5_i4v81"]
+[ext_resource type="Theme" uid="uid://ca5wyqfkdlqd1" path="res://src/configs/quiz_theme.tres" id="6_i4v81"]
 
-[sub_resource type="Resource" id="Resource_5eosi"]
+[sub_resource type="Resource" id="Resource_pqc21"]
 script = ExtResource("2_krxow")
-theme = Array[ExtResource("3_1fcwu")]([ExtResource("4_qgpcu"), ExtResource("5_qe5qc"), ExtResource("6_orf4v"), ExtResource("7_bjw7y"), ExtResource("8_qqo1y")])
+theme = Array[ExtResource("3_1fcwu")]([ExtResource("4_wyhl6"), ExtResource("5_i4v81")])
 metadata/_custom_type_script = "uid://c0nvrpnmbr6c0"
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_i4v81"]
+content_margin_left = 24.0
+content_margin_top = 24.0
+content_margin_right = 24.0
+content_margin_bottom = 24.0
 
 [node name="Level01" type="CanvasLayer" unique_id=40986269]
 follow_viewport_enabled = true
 script = ExtResource("1_72oag")
-quiz = SubResource("Resource_5eosi")
+quiz = SubResource("Resource_pqc21")
 color_right = Color(0.6318803, 0.8288257, 0.39260975, 1)
 color_wrong = Color(0.77621365, 0.3064303, 0.3064303, 1)
 
@@ -43,6 +47,7 @@ custom_minimum_size = Vector2(0, 600)
 layout_mode = 2
 
 [node name="QuestionText" type="Label" parent="Margem/VBox/Enunciado" unique_id=641478957]
+unique_name_in_owner = true
 custom_minimum_size = Vector2(0, 70)
 layout_mode = 1
 anchors_preset = 15
@@ -52,13 +57,14 @@ grow_horizontal = 2
 grow_vertical = 2
 size_flags_vertical = 6
 theme_override_font_sizes/font_size = 64
-text = "pergunta"
-horizontal_alignment = 1
+theme_override_styles/normal = SubResource("StyleBoxEmpty_i4v81")
+text = "Placeholder"
+horizontal_alignment = 3
 vertical_alignment = 1
-text_overrun_behavior = 1
-uppercase = true
+autowrap_mode = 3
 
 [node name="QuestionImage" type="TextureRect" parent="Margem/VBox/Enunciado" unique_id=1766605673]
+unique_name_in_owner = true
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -69,6 +75,7 @@ expand_mode = 1
 stretch_mode = 5
 
 [node name="QuestionVideo" type="VideoStreamPlayer" parent="Margem/VBox/Enunciado" unique_id=1747714895]
+unique_name_in_owner = true
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -78,8 +85,10 @@ grow_vertical = 2
 expand = true
 
 [node name="QuestionAudio" type="AudioStreamPlayer" parent="Margem/VBox/Enunciado" unique_id=128026620]
+unique_name_in_owner = true
 
 [node name="Alternativas" type="VBoxContainer" parent="Margem/VBox" unique_id=1299254073]
+unique_name_in_owner = true
 layout_mode = 2
 theme_override_constants/separation = 32
 
@@ -98,6 +107,7 @@ uppercase = true
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
+theme = ExtResource("6_i4v81")
 
 [node name="Alternativa2" type="HBoxContainer" parent="Margem/VBox/Alternativas" unique_id=775733344]
 custom_minimum_size = Vector2(0, 128)

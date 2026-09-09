@@ -8,21 +8,26 @@ var buttons: Array[Button]
 var index: int
 var correct: int
 
-@onready var question_texts = $Content/QuestionInfo/QuestionText
-@onready var question_image = $Content/QuestionInfo/QuestionHolder/QuestionImage
-@onready var question_video = $Content/QuestionInfo/QuestionHolder/QuestionVideo
-@onready var question_audio = $Content/QuestionInfo/QuestionHolder/AudioStreamPlayer
+@onready var question_texts = %QuestionText
+@onready var question_image = %QuestionImage
+@onready var question_video = %QuestionVideo
+@onready var question_audio = %QuestionAudio
 
 func _ready() -> void:
-	for button in $Content/QuestionInfo/QuestionHolder.get_children():
-		buttons.append(button)
-
+	for alternativa in %Alternativas.get_children():
+		for child in alternativa.get_children():
+			if child is Button:
+				buttons.append(child)
+				#print("Botão: ", child.name)
 	load_quiz()
+	
+	print("Total de botões encontrados: ", buttons.size())
 
 func load_quiz() -> void:
-	question_texts.text = quiz.theme[index].question_info
+	var question = quiz.theme[index]
 
-	var options = quiz.theme[index].options
-	for i in buttons.size():
-		buttons[i].text = options[i]
-		# buttons[i].text = quiz.theme[index].options[i]
+	# muda o texto da label "question_text" para o valor da question_info
+	question_texts.text = question.question_info
+
+	for i in range(min(buttons.size(), question.question_choices.size())):
+		buttons[i].text = question.question_choices[i]

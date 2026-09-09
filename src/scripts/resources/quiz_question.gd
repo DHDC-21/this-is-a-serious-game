@@ -11,4 +11,3 @@ class_name QuizQuestion
 
 @export var question_choices: Array[String]
 @export var question_answer: String
-

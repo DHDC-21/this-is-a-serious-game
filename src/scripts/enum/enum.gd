@@ -1,9 +1,8 @@
 class_name Enum
 
 enum QuestionType {
-    QUIZ,
+	MULTIPLA_ESCOLHA,
 	COLUNA,
 	VERDADEIRO_OU_FALSO,
-	MULTIPLA_ESCOLHA
+	SELECAO_MULTIPLA
 }
-
