@@ -10,4 +10,4 @@ class_name QuizQuestion
 @export var question_video: VideoStream
 
 @export var question_choices: Array[String]
-@export var question_answer: String
+@export var correct_answer: String

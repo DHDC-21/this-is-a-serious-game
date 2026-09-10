@@ -39,18 +39,13 @@ layout_mode = 2
 offset_transform_enabled = true
 theme_override_constants/separation = 24
 
-[node name="Enunciado" type="Panel" parent="Margem/VBox" unique_id=811728551]
-custom_minimum_size = Vector2(0, 600)
+[node name="Enunciado" type="VBoxContainer" parent="Margem/VBox" unique_id=189572049]
 layout_mode = 2
 
 [node name="QuestionText" type="Label" parent="Margem/VBox/Enunciado" unique_id=641478957]
+unique_name_in_owner = true
 custom_minimum_size = Vector2(0, 70)
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+layout_mode = 2
 size_flags_vertical = 6
 theme_override_font_sizes/font_size = 64
 text = "pergunta"
@@ -59,7 +54,13 @@ vertical_alignment = 1
 text_overrun_behavior = 1
 uppercase = true
 
-[node name="QuestionImage" type="TextureRect" parent="Margem/VBox/Enunciado" unique_id=1766605673]
+[node name="QuestionHolder" type="Panel" parent="Margem/VBox/Enunciado" unique_id=811728551]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 600)
+layout_mode = 2
+
+[node name="QuestionImage" type="TextureRect" parent="Margem/VBox/Enunciado/QuestionHolder" unique_id=1766605673]
+unique_name_in_owner = true
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -69,7 +70,8 @@ grow_vertical = 2
 expand_mode = 1
 stretch_mode = 5
 
-[node name="QuestionVideo" type="VideoStreamPlayer" parent="Margem/VBox/Enunciado" unique_id=1747714895]
+[node name="QuestionVideo" type="VideoStreamPlayer" parent="Margem/VBox/Enunciado/QuestionHolder" unique_id=1747714895]
+unique_name_in_owner = true
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -78,7 +80,8 @@ grow_horizontal = 2
 grow_vertical = 2
 expand = true
 
-[node name="QuestionAudio" type="AudioStreamPlayer" parent="Margem/VBox/Enunciado" unique_id=128026620]
+[node name="QuestionAudio" type="AudioStreamPlayer" parent="Margem/VBox/Enunciado/QuestionHolder" unique_id=128026620]
+unique_name_in_owner = true
 
 [node name="Alternativas" type="VBoxContainer" parent="Margem/VBox" unique_id=895684813]
 layout_mode = 2
@@ -129,3 +132,9 @@ custom_minimum_size = Vector2(0, 128)
 layout_mode = 2
 theme_override_font_sizes/font_size = 64
 text = "Enviar Resposta"
+
+[node name="CorrectAnswerAudio" type="AudioStreamPlayer" parent="." unique_id=1392844570]
+unique_name_in_owner = true
+
+[node name="WrongAnswerAudio" type="AudioStreamPlayer" parent="." unique_id=457576487]
+unique_name_in_owner = true

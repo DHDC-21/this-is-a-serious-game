@@ -5,6 +5,5 @@
 [resource]
 script = ExtResource("1_6moig")
 question_info = "Qual ou quais desses atores são os representantes do grupo de trabalho que participam da reposta contra o desastre?"
-question_type = 3
 question_choices = Array[String](["Defesa Cívil", "Prefeitura", "Empresas de Tecnologia", "Governo Estadual", "Órgãos de Proteção", "Instituições de Ensino Superior"])
 metadata/_custom_type_script = "uid://dvpw0g3ik34s3"
