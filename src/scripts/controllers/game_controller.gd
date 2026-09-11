@@ -23,6 +23,8 @@ func _ready() -> void:
 			if child is Button:
 				buttons.append(child)
 				#print("Botão: ", child.name)
+
+	randomize_array(quiz.theme)
 	load_quiz()
 
 	print("Total de botões encontrados: ", buttons.size())
@@ -37,8 +39,9 @@ func load_quiz() -> void:
 	# muda o texto da label "question_text" para o valor da question_info
 	question_text.text = question.question_info
 
+	var options = randomize_array(question.question_choices)
 	for i in range(min(buttons.size(), question.question_choices.size())):
-		buttons[i].text = question.question_choices[i]
+		buttons[i].text = options[i]
 		buttons[i].pressed.connect(_buttons_answer.bind(buttons[i]))
 
 	match current_quiz.question_type:
@@ -87,3 +90,8 @@ func _next_question() -> void:
 
 	index += 1
 	load_quiz()
+
+func randomize_array(array: Array) -> Array:
+	var array_temp := array
+	array_temp.shuffle()
+	return array_temp

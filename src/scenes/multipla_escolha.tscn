@@ -48,18 +48,19 @@ theme_override_constants/separation = 64
 
 [node name="Enunciado" type="VBoxContainer" parent="Margem/VBox" unique_id=95975997]
 layout_mode = 2
+size_flags_vertical = 3
 
 [node name="QuestionText" type="Label" parent="Margem/VBox/Enunciado" unique_id=572195050]
 unique_name_in_owner = true
-custom_minimum_size = Vector2(0, 70)
+custom_minimum_size = Vector2(0, -1)
+propagate_maximum_size = true
 layout_mode = 2
-size_flags_vertical = 6
+size_flags_vertical = 2
 theme_override_font_sizes/font_size = 64
 text = "pergunta"
-horizontal_alignment = 1
-vertical_alignment = 1
+horizontal_alignment = 3
+autowrap_mode = 3
 text_overrun_behavior = 1
-uppercase = true
 
 [node name="QuestionHolder" type="Panel" parent="Margem/VBox/Enunciado" unique_id=1596639599]
 unique_name_in_owner = true
