@@ -28,6 +28,10 @@ func _ready() -> void:
 	print("Total de botões encontrados: ", buttons.size())
 
 func load_quiz() -> void:
+	if index >= quiz.theme.size():
+		print("Quiz finalizado!")
+		return
+
 	var question = current_quiz
 
 	# muda o texto da label "question_text" para o valor da question_info
@@ -63,3 +67,23 @@ func _buttons_answer(button: Button) -> void:
 	else:
 		button.modulate = color_wrong
 		%WrongAnswerAudio.play()
+
+	_next_question()
+
+func _next_question() -> void:
+	for bt in buttons:
+		bt.pressed.disconnect(_buttons_answer)
+
+	await get_tree().create_timer(1.0).timeout
+
+	for bt in buttons:
+		bt.modulate = Color.WHITE
+
+	question_audio.stop()
+	question_video.stop()
+
+	question_audio.stream = null
+	question_video.stream = null
+
+	index += 1
+	load_quiz()

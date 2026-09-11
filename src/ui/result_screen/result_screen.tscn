@@ -1,0 +1,79 @@
+[gd_scene format=3 uid="uid://dxltey6vwbcwy"]
+
+[ext_resource type="Script" uid="uid://dejysq5vy64oj" path="res://src/ui/result_screen/result_screen.gd" id="1_7d7h5"]
+
+[node name="ResultScreen" type="CanvasLayer" unique_id=1962608010]
+script = ExtResource("1_7d7h5")
+
+[node name="Control" type="Control" parent="." unique_id=625909600]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="Control" unique_id=1325593750]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -250.0
+offset_top = -180.0
+offset_right = 250.0
+offset_bottom = 180.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/Panel" unique_id=1170359489]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 30.0
+offset_top = 30.0
+offset_right = -30.0
+offset_bottom = -30.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 20
+alignment = 1
+
+[node name="TitleLabel" type="Label" parent="Control/Panel/VBoxContainer" unique_id=1594273797]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Resultado final"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ScoreLabel" type="Label" parent="Control/Panel/VBoxContainer" unique_id=2026613436]
+unique_name_in_owner = true
+layout_mode = 2
+text = "0 / 0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="FeedbackLabel" type="Label" parent="Control/Panel/VBoxContainer" unique_id=2075067756]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Seu feedback aparecerá aqui."
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="Buttons" type="HBoxContainer" parent="Control/Panel/VBoxContainer" unique_id=2115199125]
+layout_mode = 2
+theme_override_constants/separation = 20
+alignment = 1
+
+[node name="RetryButton" type="Button" parent="Control/Panel/VBoxContainer/Buttons" unique_id=492835629]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Jogar novamente"
+
+[node name="MenuButton" type="Button" parent="Control/Panel/VBoxContainer/Buttons" unique_id=1014502797]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Voltar ao menu"
