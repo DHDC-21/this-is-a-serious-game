@@ -17,7 +17,7 @@ config/icon="res://icon.svg"
 
 [autoload]
 
-DiscordRPCLoader="*res://addons/discord-rpc-gd/nodes/discord_autoload.gd"
+GameState="*res://src/autoloads/game_state.gd"
 
 [display]
 
@@ -34,7 +34,7 @@ project/assembly_name="My First 3D Game"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/discord-rpc-gd/plugin.cfg")
+enabled=PackedStringArray()
 
 [input]
 

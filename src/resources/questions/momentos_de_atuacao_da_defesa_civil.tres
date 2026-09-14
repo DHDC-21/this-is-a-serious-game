@@ -4,4 +4,7 @@
 
 [resource]
 script = ExtResource("1_1wydh")
+question_info = "Segundo DORO et Al. (2022), a Defesa Cívil trabalha antes, durante e depois de um desastres. Sabendo disso, qual  alternativa representa corretamente o trabalho da defesa cívil nesses tres momentos de atuação."
+question_choices = Array[String](["Ensinando as pessoas sobre o que se deve fazer para evitar desastres; Auxiliam no socorro de pessoas atingidas pelo desastre; Auxiliam a cidade a voltar para a normalidade.", "Organizam competições de natação  para casos de inundações e enxentes; Palestras sobre desastres; Auxiliam na reconstrução da cidade."])
+correct_choice = 0
 metadata/_custom_type_script = "uid://dvpw0g3ik34s3"

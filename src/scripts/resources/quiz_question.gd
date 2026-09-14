@@ -1,8 +1,9 @@
-extends Resource
 class_name QuizQuestion
+extends Resource
 
 @export var question_id: int = 0
 @export var question_info: String = ""
+@export var base_points: int = 100
 
 @export var engine: Enum.QuestionEngine = Enum.QuestionEngine.MULTIPLA_ESCOLHA
 @export var question_type: Enum.QuestionType = Enum.QuestionType.TEXTO

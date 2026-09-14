@@ -1,14 +1,23 @@
 [gd_scene format=3 uid="uid://dpy5urktkjcul"]
 
 [ext_resource type="Script" uid="uid://bt4ptncwhialj" path="res://src/ui/menu/main.gd" id="1_anfcr"]
-[ext_resource type="Theme" uid="uid://b4tf7yde8ime0" path="res://src/configs/main_menu.tres" id="1_m50lq"]
+[ext_resource type="Theme" uid="uid://bgdmgl16esiuu" path="res://src/configs/main_menu.tres" id="1_m50lq"]
+[ext_resource type="Theme" uid="uid://hyk4wbm6pq8g" path="res://src/configs/popup_sair.tres" id="3_ewka3"]
 
-[node name="Main" type="CanvasLayer" unique_id=1591354343]
-follow_viewport_enabled = true
+[node name="Main" type="Control" unique_id=1516892158]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource("1_m50lq")
 script = ExtResource("1_anfcr")
 
-[node name="Control" type="Control" parent="." unique_id=1967607401]
-layout_mode = 3
+[node name="Margem" type="MarginContainer" parent="." unique_id=2111309782]
+layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -17,79 +26,61 @@ grow_vertical = 2
 size_flags_horizontal = 4
 size_flags_vertical = 8
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Control" unique_id=1221444049]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -300.0
-offset_top = -472.0
-offset_right = 300.0
-offset_bottom = 472.0
-grow_horizontal = 2
-grow_vertical = 2
-offset_transform_enabled = true
-theme_override_constants/separation = 128
+[node name="VBoxContainer" type="VBoxContainer" parent="Margem" unique_id=1221444049]
+propagate_maximum_size = false
+layout_mode = 2
+size_flags_horizontal = 4
 alignment = 1
 
-[node name="Titulo" type="Label" parent="Control/VBoxContainer" unique_id=850109594]
+[node name="Titulo" type="Label" parent="Margem/VBoxContainer" unique_id=850109594]
 custom_maximum_size = Vector2(900, -1)
 clip_contents = true
 layout_mode = 2
-offset_transform_enabled = true
-theme = ExtResource("1_m50lq")
-theme_type_variation = &"HeaderLarge"
+size_flags_horizontal = 4
+size_flags_vertical = 1
 text = "Plancon Game Quiz"
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 2
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Control/VBoxContainer" unique_id=286620016]
+[node name="Opcoes" type="VBoxContainer" parent="Margem/VBoxContainer" unique_id=286620016]
 custom_minimum_size = Vector2(500, 0)
 layout_mode = 2
 size_flags_horizontal = 20
 size_flags_vertical = 22
-theme_override_constants/separation = 64
 alignment = 1
 
-[node name="BtnIniciar" type="Button" parent="Control/VBoxContainer/VBoxContainer" unique_id=1644395719]
+[node name="BtnIniciar" type="Button" parent="Margem/VBoxContainer/Opcoes" unique_id=1644395719]
 custom_minimum_size = Vector2(0, 200)
 layout_mode = 2
 size_flags_vertical = 3
-theme = ExtResource("1_m50lq")
 text = "Iniciar"
 
-[node name="BtnCreditos" type="Button" parent="Control/VBoxContainer/VBoxContainer" unique_id=516267098]
+[node name="BtnCreditos" type="Button" parent="Margem/VBoxContainer/Opcoes" unique_id=516267098]
 custom_minimum_size = Vector2(0, 200)
 layout_mode = 2
 size_flags_vertical = 3
-theme = ExtResource("1_m50lq")
 text = "Créditos"
 
-[node name="PopupSair" type="ConfirmationDialog" parent="Control/VBoxContainer/VBoxContainer/BtnCreditos" unique_id=2069910621]
+[node name="BtnSair" type="Button" parent="Margem/VBoxContainer/Opcoes" unique_id=553306780]
+custom_minimum_size = Vector2(0, 200)
+layout_mode = 2
+size_flags_vertical = 3
+text = "Sair"
+
+[node name="PopupSair" type="ConfirmationDialog" parent="Margem/VBoxContainer/Opcoes/BtnSair" unique_id=2069910621]
+unique_name_in_owner = true
 oversampling_override = 1.0
-mode = 3
 title = ""
 initial_position = 2
-size = Vector2i(1000, 400)
-visible = true
-max_size = Vector2i(1000, 16384)
+size = Vector2i(900, 260)
+theme = ExtResource("3_ewka3")
 ok_button_text = "Sim"
 dialog_text = "Você tem certeza que deseja fechar o jogo?
 "
 dialog_autowrap = true
 cancel_button_text = "Não"
 
-[node name="BtnSair" type="Button" parent="Control/VBoxContainer/VBoxContainer" unique_id=553306780]
-custom_minimum_size = Vector2(0, 200)
-layout_mode = 2
-size_flags_vertical = 3
-theme = ExtResource("1_m50lq")
-text = "Sair"
-
-[connection signal="pressed" from="Control/VBoxContainer/VBoxContainer/BtnIniciar" to="." method="_on_btn_iniciar_pressed"]
-[connection signal="pressed" from="Control/VBoxContainer/VBoxContainer/BtnCreditos" to="." method="_on_btn_creditos_pressed"]
-[connection signal="confirmed" from="Control/VBoxContainer/VBoxContainer/BtnCreditos/PopupSair" to="." method="_on_popup_sair_confirmed"]
-[connection signal="pressed" from="Control/VBoxContainer/VBoxContainer/BtnSair" to="." method="_on_btn_sair_pressed"]
+[connection signal="pressed" from="Margem/VBoxContainer/Opcoes/BtnIniciar" to="." method="_on_btn_iniciar_pressed"]
+[connection signal="pressed" from="Margem/VBoxContainer/Opcoes/BtnCreditos" to="." method="_on_btn_creditos_pressed"]
+[connection signal="pressed" from="Margem/VBoxContainer/Opcoes/BtnSair" to="." method="_on_btn_sair_pressed"]

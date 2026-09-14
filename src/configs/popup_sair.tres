@@ -1,0 +1,20 @@
+[gd_resource type="Theme" format=3 uid="uid://hyk4wbm6pq8g"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ukyus"]
+bg_color = Color(0.45126528, 0.6578363, 0.34189698, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7kgfm"]
+content_margin_left = 128.0
+content_margin_top = 8.0
+content_margin_right = 128.0
+content_margin_bottom = 8.0
+bg_color = Color(0.82224923, 0.4543849, 0.4543849, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2ej2n"]
+
+[resource]
+default_font_size = 32
+Button/font_sizes/font_size = 64
+Button/styles/focus = SubResource("StyleBoxFlat_ukyus")
+Button/styles/normal = SubResource("StyleBoxFlat_7kgfm")
+Label/styles/normal = SubResource("StyleBoxEmpty_2ej2n")

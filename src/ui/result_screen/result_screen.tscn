@@ -15,15 +15,13 @@ grow_vertical = 2
 
 [node name="Panel" type="Panel" parent="Control" unique_id=1325593750]
 layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -250.0
-offset_top = -180.0
-offset_right = 250.0
-offset_bottom = 180.0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 48.0
+offset_top = 48.0
+offset_right = -48.0
+offset_bottom = -48.0
 grow_horizontal = 2
 grow_vertical = 2
 
@@ -32,18 +30,19 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 30.0
-offset_top = 30.0
-offset_right = -30.0
-offset_bottom = -30.0
+offset_left = 56.0
+offset_top = 56.0
+offset_right = -56.0
+offset_bottom = -56.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/separation = 20
+theme_override_constants/separation = 36
 alignment = 1
 
 [node name="TitleLabel" type="Label" parent="Control/Panel/VBoxContainer" unique_id=1594273797]
 unique_name_in_owner = true
 layout_mode = 2
+theme_override_font_sizes/font_size = 54
 text = "Resultado final"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -51,29 +50,35 @@ vertical_alignment = 1
 [node name="ScoreLabel" type="Label" parent="Control/Panel/VBoxContainer" unique_id=2026613436]
 unique_name_in_owner = true
 layout_mode = 2
-text = "0 / 0"
+theme_override_font_sizes/font_size = 38
+text = "Pontuação: 0 / 0"
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="FeedbackLabel" type="Label" parent="Control/Panel/VBoxContainer" unique_id=2075067756]
 unique_name_in_owner = true
 layout_mode = 2
-text = "Seu feedback aparecerá aqui."
+theme_override_font_sizes/font_size = 30
+autowrap_mode = 3
+text = "Parabéns! Você concluiu a rodada. Vamos tentar novamente ou voltar ao menu?"
 horizontal_alignment = 1
 vertical_alignment = 1
-autowrap_mode = 3
 
 [node name="Buttons" type="HBoxContainer" parent="Control/Panel/VBoxContainer" unique_id=2115199125]
 layout_mode = 2
-theme_override_constants/separation = 20
+theme_override_constants/separation = 32
 alignment = 1
 
 [node name="RetryButton" type="Button" parent="Control/Panel/VBoxContainer/Buttons" unique_id=492835629]
 unique_name_in_owner = true
 layout_mode = 2
+custom_minimum_size = Vector2(280, 110)
+theme_override_font_sizes/font_size = 30
 text = "Jogar novamente"
 
 [node name="MenuButton" type="Button" parent="Control/Panel/VBoxContainer/Buttons" unique_id=1014502797]
 unique_name_in_owner = true
 layout_mode = 2
+custom_minimum_size = Vector2(280, 110)
+theme_override_font_sizes/font_size = 30
 text = "Voltar ao menu"

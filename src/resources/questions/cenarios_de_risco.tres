@@ -4,4 +4,7 @@
 
 [resource]
 script = ExtResource("1_po3ly")
+question_info = "Segundo a Coordenadoria Estadual de Proteção e Defesa Civil, Desastre é um acontecimento que causa grandes estragos materiais e coloca em risco a vida de várias pessoas. Sabendo disso, quais das alternativas NÃO são considerados desastres naturais:"
+question_choices = Array[String](["Chuva de granizo", "Pista molhada", "Ventania", "Falta de area verde", "Todas outras alternativas"])
+correct_choice = 4
 metadata/_custom_type_script = "uid://dvpw0g3ik34s3"

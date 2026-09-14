@@ -4,8 +4,11 @@
 [ext_resource type="Script" uid="uid://dvpw0g3ik34s3" path="res://src/scripts/resources/quiz_question.gd" id="2_bb3gt"]
 [ext_resource type="Resource" uid="uid://bjv308eyo8mto" path="res://src/resources/questions/representantes_GT_ME.tres" id="3_bft8b"]
 [ext_resource type="Resource" uid="uid://c3bewa1f1pf7t" path="res://src/resources/questions/representantes_GT_SM.tres" id="4_bb3gt"]
+[ext_resource type="Resource" uid="uid://c2h1gjrdlhm0n" path="res://src/resources/questions/cenarios_de_risco_em_mogi_mirm.tres" id="5_5cbjt"]
+[ext_resource type="Resource" uid="uid://ck2onm6ul4x07" path="res://src/resources/questions/cenarios_de_risco.tres" id="6_pnox7"]
+[ext_resource type="Resource" uid="uid://rdels2adrdey" path="res://src/resources/questions/momentos_de_atuacao_da_defesa_civil.tres" id="7_3kul7"]
 
 [resource]
 script = ExtResource("1_bft8b")
-theme = Array[ExtResource("2_bb3gt")]([ExtResource("3_bft8b"), ExtResource("4_bb3gt")])
+theme = Array[ExtResource("2_bb3gt")]([ExtResource("3_bft8b"), ExtResource("4_bb3gt"), ExtResource("5_5cbjt"), ExtResource("6_pnox7"), ExtResource("7_3kul7")])
 metadata/_custom_type_script = "uid://c0nvrpnmbr6c0"

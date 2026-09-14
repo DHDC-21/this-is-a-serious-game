@@ -4,4 +4,8 @@
 
 [resource]
 script = ExtResource("1_jud2u")
+question_info = "Selecione quais desatres são os mais comuns no município de Mogi Mirim:"
+engine = 3
+question_choices = Array[String](["Enxentes", "Inundações", "Queimadas", "Tsunamis", "Furacoẽs", "Contaminação Química"])
+correct_answers = Array[int]([0, 1, 2])
 metadata/_custom_type_script = "uid://dvpw0g3ik34s3"

@@ -4,7 +4,7 @@
 
 [resource]
 script = ExtResource("1_qnjad")
-question_info = "Com base no que foi aprendido,"
+question_info = "Com base no que foi aprendido, qual das alternativas abaixo representam as isntituições responsáveis por liderr o grupo de  trabalho?"
 question_choices = Array[String](["Defesa Cívil, Prefeitura, Escolas, Igrejas", "Defesa Civil, Órgãos de Proteção, Bombeiros", "Defesa Cívil, Prefeitura, Policia Cívil, Bombeiros", "Defesa Cívil, Governo Federal, Governo Estadual e Prefeitura", "Defesa Cívil, Policia Militar, Bombeiros, Empresas Locais"])
-question_answer = "Defesa Civil, Órgãos de Proteção, Bombeiros"
+correct_choice = 1
 metadata/_custom_type_script = "uid://dvpw0g3ik34s3"
