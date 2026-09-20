@@ -1516,8 +1516,8 @@ propagate_maximum_size = true
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_font_sizes/font_size = 64
-text = "Titulo/enunciado da pergunta"
-horizontal_alignment = 3
+text = "Enunciado"
+horizontal_alignment = 1
 autowrap_mode = 3
 text_overrun_behavior = 1
 
@@ -1553,6 +1553,7 @@ unique_name_in_owner = true
 [node name="Alternativas" type="VBoxContainer" parent="Margem/VBox" unique_id=1299254073]
 unique_name_in_owner = true
 layout_mode = 2
+theme = ExtResource("1_2jg5y")
 theme_override_constants/separation = 32
 
 [node name="Alternativa1" type="HBoxContainer" parent="Margem/VBox/Alternativas" unique_id=1565665131]
@@ -1570,7 +1571,7 @@ uppercase = true
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-theme = SubResource("Theme_wyhl6")
+text = "lorem ipsum cap exemplo"
 
 [node name="Alternativa2" type="HBoxContainer" parent="Margem/VBox/Alternativas" unique_id=775733344]
 custom_minimum_size = Vector2(0, 128)
@@ -1587,7 +1588,7 @@ uppercase = true
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-theme = SubResource("Theme_wyhl6")
+text = "lorem ipsum cap exemplo"
 
 [node name="Alternativa3" type="HBoxContainer" parent="Margem/VBox/Alternativas" unique_id=1832872656]
 custom_minimum_size = Vector2(0, 128)
@@ -1604,7 +1605,7 @@ uppercase = true
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-theme = SubResource("Theme_wyhl6")
+text = "lorem ipsum cap exemplo"
 
 [node name="Alternativa4" type="HBoxContainer" parent="Margem/VBox/Alternativas" unique_id=2130114840]
 custom_minimum_size = Vector2(0, 128)
@@ -1621,7 +1622,7 @@ uppercase = true
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-theme = SubResource("Theme_wyhl6")
+text = "lorem ipsum cap exemplo"
 
 [node name="Alternativa5" type="HBoxContainer" parent="Margem/VBox/Alternativas" unique_id=1062946101]
 custom_minimum_size = Vector2(0, 128)
@@ -1638,7 +1639,7 @@ uppercase = true
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-theme = SubResource("Theme_wyhl6")
+text = "lorem ipsum cap exemplo"
 
 [node name="Feedback" type="TextEdit" parent="Margem/VBox" unique_id=708982306]
 unique_name_in_owner = true

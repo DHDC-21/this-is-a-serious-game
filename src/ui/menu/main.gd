@@ -9,7 +9,7 @@ func _ready() -> void:
 
 func _on_btn_iniciar_pressed() -> void:
 	GameState.reset_round()
-	var quiz_theme := GameState.build_default_theme()
+	var quiz_theme: QuizTheme = GameState.build_default_theme()
 	GameState.begin_quiz(quiz_theme)
 
 func _on_btn_creditos_pressed() -> void:

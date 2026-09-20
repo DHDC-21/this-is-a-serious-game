@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://3eb4d1m2gf3x"]
 
-[ext_resource type="Theme" uid="uid://3oto8yykws2a" path="res://src/resources/themes/ui_quiz_themes.tres" id="1_theme"]
 [ext_resource type="Script" uid="uid://ccnn6naas46dw" path="res://src/scripts/controllers/selecao_multipla.gd" id="1_def456"]
+[ext_resource type="Theme" uid="uid://3oto8yykws2a" path="res://src/resources/themes/ui_quiz_themes.tres" id="1_theme"]
 
 [node name="SelecaoMultipla" type="Control" unique_id=888388140]
 layout_mode = 3
@@ -42,8 +42,8 @@ custom_minimum_size = Vector2(0, 70)
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_font_sizes/font_size = 64
-text = "Titulo/ Enunciado da pergunta"
-horizontal_alignment = 3
+text = "Texo enunciado"
+horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 3
 text_overrun_behavior = 1
@@ -85,35 +85,30 @@ size_flags_vertical = 3
 [node name="Alternativa1" type="CheckBox" parent="Margem/VBox/Alternativas" unique_id=1546930032]
 custom_minimum_size = Vector2(0, 128)
 layout_mode = 2
-theme_override_constants/h_separation = 32
 theme_override_font_sizes/font_size = 32
 text = "lorem ipsum caps"
 
 [node name="Alternativa2" type="CheckBox" parent="Margem/VBox/Alternativas" unique_id=358221878]
 custom_minimum_size = Vector2(0, 128)
 layout_mode = 2
-theme_override_constants/h_separation = 32
 theme_override_font_sizes/font_size = 32
 text = "lorem ipsum caps"
 
 [node name="Alternativa3" type="CheckBox" parent="Margem/VBox/Alternativas" unique_id=1206882792]
 custom_minimum_size = Vector2(0, 128)
 layout_mode = 2
-theme_override_constants/h_separation = 32
 theme_override_font_sizes/font_size = 32
 text = "lorem ipsum caps"
 
 [node name="Alternativa4" type="CheckBox" parent="Margem/VBox/Alternativas" unique_id=1921523631]
 custom_minimum_size = Vector2(0, 128)
 layout_mode = 2
-theme_override_constants/h_separation = 32
 theme_override_font_sizes/font_size = 32
 text = "lorem ipsum caps"
 
 [node name="Alternativa5" type="CheckBox" parent="Margem/VBox/Alternativas" unique_id=555231710]
 custom_minimum_size = Vector2(0, 128)
 layout_mode = 2
-theme_override_constants/h_separation = 32
 theme_override_font_sizes/font_size = 32
 text = "lorem ipsum caps"
 
@@ -121,7 +116,7 @@ text = "lorem ipsum caps"
 unique_name_in_owner = true
 custom_minimum_size = Vector2(0, 128)
 layout_mode = 2
-placeholder_text = "o feedback aparecera aqui"
+placeholder_text = "feedbacks"
 
 [node name="SubmitButton" type="Button" parent="Margem/VBox" unique_id=1009739022]
 unique_name_in_owner = true

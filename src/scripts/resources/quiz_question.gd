@@ -40,7 +40,7 @@ func is_correct_selection(selected_indices: Array[int]) -> bool:
 		return false
 
 	selected_indices.sort()
-	var expected := correct_answers.duplicate()
+	var expected: Array[int] = correct_answers.duplicate()
 	expected.sort()
 
 	return selected_indices == expected

@@ -2,6 +2,13 @@ extends Control
 
 var current_question: QuizQuestion = null
 
+@onready var question_text: Label = %QuestionText
+@onready var question_holder: Panel = %QuestionHolder
+@onready var question_image: TextureRect = %QuestionImage
+@onready var question_video: VideoStreamPlayer = %QuestionVideo
+@onready var question_audio: AudioStreamPlayer = %QuestionAudio
+@onready var feedback_box: TextEdit = %Feedback
+
 func _ready() -> void:
 	if GameState == null:
 		push_error("GameState não foi encontrado.")
@@ -26,17 +33,11 @@ func _update_question_type_visibility() -> void:
 	if current_question == null:
 		return
 
-	var question_text: Label = get_node_or_null("Margem/VBox/Enunciado/QuestionText") as Label
-	var question_holder: Panel = get_node_or_null("Margem/VBox/Enunciado/QuestionHolder") as Panel
-	var question_image: TextureRect = get_node_or_null("Margem/VBox/Enunciado/QuestionHolder/QuestionImage") as TextureRect
-	var question_video: VideoStreamPlayer = get_node_or_null("Margem/VBox/Enunciado/QuestionHolder/QuestionVideo") as VideoStreamPlayer
-	var question_audio: AudioStreamPlayer = get_node_or_null("Margem/VBox/Enunciado/QuestionHolder/QuestionAudio") as AudioStreamPlayer
-
 	if question_text == null:
 		return
 
-	var type := current_question.question_type
-	var should_show_media := type != Enum.QuestionType.TEXTO
+	var type: Enum.QuestionType = current_question.question_type
+	var should_show_media: bool = type != Enum.QuestionType.TEXTO
 
 	if question_holder != null:
 		question_holder.visible = should_show_media
@@ -60,7 +61,6 @@ func _update_question_type_visibility() -> void:
 	question_text.add_theme_font_size_override("font_size", 32)
 
 func _apply_feedback(is_correct: bool) -> void:
-	var feedback_box: TextEdit = get_node_or_null("Margem/VBox/Feedback") as TextEdit
 	if feedback_box == null:
 		return
 

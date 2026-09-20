@@ -3,6 +3,16 @@ extends Control
 var current_question: QuizQuestion = null
 var selected_index: int = -1
 
+@onready var question_text: Label = %QuestionText
+@onready var question_holder: Panel = %QuestionHolder
+@onready var question_image: TextureRect = %QuestionImage
+@onready var question_video: VideoStreamPlayer = %QuestionVideo
+@onready var question_audio: AudioStreamPlayer = %QuestionAudio
+@onready var alternatives: VBoxContainer = %Alternativas
+@onready var feedback_box: TextEdit = %Feedback
+@onready var correct_answer_audio: AudioStreamPlayer = %CorrectAnswerAudio
+@onready var wrong_answer_audio: AudioStreamPlayer = %WrongAnswerAudio
+
 func _ready() -> void:
 	if GameState == null:
 		push_error("GameState não foi encontrado.")
@@ -17,29 +27,62 @@ func _ready() -> void:
 		GameState.finish_quiz()
 		return
 
+	_ensure_choice_nodes()
 	_update_question_type_visibility()
 	_render_question()
 
-	for i in range(1, 6):
-		var button: Button = get_node_or_null("Margem/VBox/Alternativas/Alternativa%d/ButtonOption%d" % [i, i]) as Button
+	for i in range(current_question.question_choices.size()):
+		var button_path: String = "Alternativa%d/ButtonOption%d" % [i + 1, i + 1]
+		var button: Button = alternatives.get_node_or_null(button_path) as Button
 		if button != null:
-			button.pressed.connect(_on_choice_pressed.bind(i - 1))
+			if not button.pressed.is_connected(_on_choice_pressed):
+				button.pressed.connect(_on_choice_pressed.bind(i))
+
+func _ensure_choice_nodes() -> void:
+	if current_question == null:
+		return
+
+	if alternatives == null:
+		return
+
+	var expected_count: int = max(current_question.question_choices.size(), 0)
+	var current_count: int = alternatives.get_child_count()
+
+	while current_count < expected_count:
+		var option_index: int = current_count + 1
+		var option_row: HBoxContainer = HBoxContainer.new()
+		option_row.name = "Alternativa%d" % option_index
+		option_row.custom_minimum_size = Vector2(0, 90)
+
+		var option_label: Label = Label.new()
+		option_label.name = "Label%d" % option_index
+		option_label.custom_minimum_size = Vector2(40, 0)
+		option_label.vertical_alignment = VERTICAL_ALIGNMENT_CENTER
+		option_row.add_child(option_label)
+
+		var option_button: Button = Button.new()
+		option_button.name = "ButtonOption%d" % option_index
+		option_button.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+		option_button.text = ""
+		option_row.add_child(option_button)
+
+		alternatives.add_child(option_row)
+		current_count += 1
+
+	for i in range(alternatives.get_child_count()):
+		var row: Control = alternatives.get_child(i) as Control
+		if row != null:
+			row.visible = i < expected_count
 
 func _update_question_type_visibility() -> void:
 	if current_question == null:
 		return
 
-	var question_text: Label = get_node_or_null("Margem/VBox/Enunciado/QuestionText") as Label
-	var question_holder: Panel = get_node_or_null("Margem/VBox/Enunciado/QuestionHolder") as Panel
-	var question_image: TextureRect = get_node_or_null("Margem/VBox/Enunciado/QuestionHolder/QuestionImage") as TextureRect
-	var question_video: VideoStreamPlayer = get_node_or_null("Margem/VBox/Enunciado/QuestionHolder/QuestionVideo") as VideoStreamPlayer
-	var question_audio: AudioStreamPlayer = get_node_or_null("Margem/VBox/Enunciado/QuestionHolder/QuestionAudio") as AudioStreamPlayer
-
 	if question_text == null:
 		return
 
-	var type := current_question.question_type
-	var should_show_media := type != Enum.QuestionType.TEXTO
+	var type: Enum.QuestionType = current_question.question_type
+	var should_show_media: bool = type != Enum.QuestionType.TEXTO
 
 	if question_holder != null:
 		question_holder.visible = should_show_media
@@ -63,7 +106,6 @@ func _update_question_type_visibility() -> void:
 	question_text.add_theme_font_size_override("font_size", 32)
 
 func _apply_feedback(is_correct: bool) -> void:
-	var feedback_box: TextEdit = get_node_or_null("Margem/VBox/Feedback") as TextEdit
 	if feedback_box == null:
 		return
 
@@ -87,23 +129,32 @@ func _render_question() -> void:
 	if current_question == null:
 		return
 
-	var label: Label = get_node_or_null("Margem/VBox/Enunciado/QuestionText") as Label
-	if label != null:
-		label.text = current_question.question_info
+	_ensure_choice_nodes()
 
-	for i in range(1, 6):
-		var button: Button = get_node_or_null("Margem/VBox/Alternativas/Alternativa%d/ButtonOption%d" % [i, i]) as Button
-		var item_label: Label = get_node_or_null("Margem/VBox/Alternativas/Alternativa%d/Label%d" % [i, i]) as Label
+	if question_text != null:
+		question_text.text = current_question.question_info
+
+	var option_count: int = current_question.question_choices.size()
+	for i in range(option_count):
+		var option_row: Control = alternatives.get_node_or_null("Alternativa%d" % (i + 1)) as Control
+		var button: Button = alternatives.get_node_or_null("Alternativa%d/ButtonOption%d" % [i + 1, i + 1]) as Button
+		var item_label: Label = alternatives.get_node_or_null("Alternativa%d/Label%d" % [i + 1, i + 1]) as Label
+		if option_row != null:
+			option_row.visible = true
 		if button == null:
 			continue
-		button.visible = i - 1 < current_question.question_choices.size()
-		button.text = "" if i - 1 >= current_question.question_choices.size() else current_question.question_choices[i - 1]
+		button.visible = true
+		button.text = current_question.question_choices[i]
 		if item_label != null:
-			item_label.visible = i - 1 < current_question.question_choices.size()
-			if i - 1 < current_question.question_choices.size():
-				item_label.text = char(97 + (i - 1)) + "."
+			item_label.visible = true
+			item_label.text = char(97 + i) + "."
 
-	var feedback_box: TextEdit = get_node_or_null("Margem/VBox/Feedback") as TextEdit
+	if alternatives != null:
+		for i in range(alternatives.get_child_count()):
+			var row: Control = alternatives.get_child(i) as Control
+			if row != null and i >= option_count:
+				row.visible = false
+
 	if feedback_box != null:
 		feedback_box.visible = false
 
@@ -117,7 +168,7 @@ func _submit_answer() -> void:
 	if selected_index < 0 or selected_index >= current_question.question_choices.size():
 		return
 
-	var is_correct := current_question.is_correct_choice(selected_index)
+	var is_correct: bool = current_question.is_correct_choice(selected_index)
 	_apply_feedback(is_correct)
 
 	if is_correct:
@@ -127,7 +178,7 @@ func _submit_answer() -> void:
 	else:
 		# Permite retry na mesma pergunta, como o Duolingo.
 		selected_index = -1
-		for i in range(1, 6):
-			var button: Button = get_node_or_null("Margem/VBox/Alternativas/Alternativa%d/ButtonOption%d" % [i, i]) as Button
+		for i in range(current_question.question_choices.size()):
+			var button: Button = alternatives.get_node_or_null("Alternativa%d/ButtonOption%d" % [i + 1, i + 1]) as Button
 			if button != null:
 				button.disabled = false

@@ -14,8 +14,8 @@ func reset_round() -> void:
 	total_question_points = 0
 
 func build_default_theme() -> QuizTheme:
-	var theme := QuizTheme.new()
-	var source_theme_path := "res://src/resources/themes/theme_varied.tres"
+	var theme: QuizTheme = QuizTheme.new()
+	var source_theme_path: String = "res://src/resources/themes/theme_varied.tres"
 	var loaded_theme = load(source_theme_path)
 	var source_questions: Array[QuizQuestion] = []
 
@@ -23,21 +23,21 @@ func build_default_theme() -> QuizTheme:
 		source_questions = loaded_theme.theme.duplicate()
 
 	if source_questions.is_empty():
-		var question_path := "res://src/resources/questions"
-		var dir := DirAccess.open(question_path)
+		var question_path: String = "res://src/resources/questions"
+		var dir: DirAccess = DirAccess.open(question_path)
 
 		if dir == null:
 			push_error("Não foi possível abrir a pasta de perguntas: %s" % question_path)
 			return theme
 
-		var files := dir.get_files()
+		var files: PackedStringArray = dir.get_files()
 		files.sort()
 
 		for file_name in files:
 			if not file_name.ends_with(".tres"):
 				continue
 
-			var resource_path := "%s/%s" % [question_path, file_name]
+			var resource_path: String = "%s/%s" % [question_path, file_name]
 			var loaded_resource = load(resource_path)
 			if loaded_resource is QuizQuestion:
 				source_questions.append(loaded_resource)
@@ -112,10 +112,16 @@ func get_current_question() -> QuizQuestion:
 	return current_quiz.theme[current_question_index]
 
 func is_scene_valid_for_current_question(scene_path: String) -> bool:
-	var question := get_current_question()
+	var question: QuizQuestion = get_current_question()
 	if question == null:
 		return false
 	return scene_path == get_scene_for_question(question)
+
+func get_current_scene_path() -> String:
+	var current_scene: Node = get_tree().current_scene
+	if not is_instance_valid(current_scene):
+		return ""
+	return current_scene.scene_file_path
 
 func load_current_question() -> void:
 	if current_quiz == null:
@@ -127,23 +133,19 @@ func load_current_question() -> void:
 		finish_quiz()
 		return
 
-	var target_scene := get_scene_for_question(question)
+	var target_scene: String = get_scene_for_question(question)
 	if target_scene.is_empty():
 		finish_quiz()
 		return
 
-	var current_scene_path := ""
-	if is_instance_valid(get_tree().current_scene):
-		current_scene_path = get_tree().current_scene.scene_file_path
-
+	var current_scene_path: String = get_current_scene_path()
 	if current_scene_path != target_scene:
 		get_tree().change_scene_to_file(target_scene)
 		return
 
-	# Se a cena já estiver correta, a pergunta atual continua sendo renderizada.
-	# A validação final pode ser feita na própria cena quando ela for criada.
-	if current_scene_path == target_scene:
-		return
+	# A cena atual já é a correta, por isso a pergunta continua renderizando na
+	# cena atual sem qualquer tentativa de atribuição em expressão inválida.
+	return
 
 func get_scene_for_question(question: QuizQuestion) -> String:
 	if question == null:
@@ -169,10 +171,8 @@ func advance_to_next_question() -> void:
 	load_current_question()
 
 func finish_quiz() -> void:
-	if current_quiz == null:
-		get_tree().change_scene_to_file("res://src/ui/result_screen/result_screen.tscn")
-		return
+	var result_scene_path: String = "res://src/ui/result_screen/result_screen.tscn"
+	var current_scene_path: String = get_current_scene_path()
 
-	var result_scene_path := "res://src/ui/result_screen/result_screen.tscn"
-	if get_tree().current_scene == null or get_tree().current_scene.scene_file_path != result_scene_path:
+	if current_scene_path != result_scene_path:
 		get_tree().change_scene_to_file(result_scene_path)

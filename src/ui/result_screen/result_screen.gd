@@ -47,7 +47,7 @@ func update_result() -> void:
 
 func _on_retry_pressed() -> void:
 	GameState.reset_round()
-	var quiz_theme := GameState.build_default_theme()
+	var quiz_theme: QuizTheme = GameState.build_default_theme()
 	GameState.begin_quiz(quiz_theme)
 
 func _on_menu_pressed() -> void:

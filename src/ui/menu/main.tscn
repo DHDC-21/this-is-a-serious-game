@@ -16,6 +16,15 @@ size_flags_vertical = 3
 theme = ExtResource("1_m50lq")
 script = ExtResource("1_anfcr")
 
+[node name="ColorRect" type="ColorRect" parent="." unique_id=575596476]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.28297502, 0.1810508, 0.16940235, 1)
+
 [node name="Margem" type="MarginContainer" parent="." unique_id=2111309782]
 layout_mode = 1
 anchors_preset = 15
