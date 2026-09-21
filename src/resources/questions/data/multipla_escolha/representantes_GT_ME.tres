@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="MultiplaEscolhaModel" format=3 uid="uid://bjv308eyo8mto"]
+
+[ext_resource type="Script" uid="uid://tpt6ribyle37" path="res://src/resources/questions/model/multipla_escolha.gd" id="1_qnjad"]
+
+[resource]
+script = ExtResource("1_qnjad")
+question_info = "Com base no que foi aprendido, qual das alternativas abaixo representam as isntituições responsáveis por liderr o grupo de  trabalho?"
+question_choices = Array[String](["Defesa Cívil, Prefeitura, Escolas, Igrejas", "Defesa Civil, Órgãos de Proteção, Bombeiros", "Defesa Cívil, Prefeitura, Policia Cívil, Bombeiros", "Defesa Cívil, Governo Federal, Governo Estadual e Prefeitura", "Defesa Cívil, Policia Militar, Bombeiros, Empresas Locais"])
+correct_choice = 1
