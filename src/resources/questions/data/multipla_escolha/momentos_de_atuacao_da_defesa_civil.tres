@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="MultiplaEscolhaModel" format=3 uid="uid://rdels2adrdey"]
+
+[ext_resource type="Script" uid="uid://4u6p38cre7ym" path="res://src/resources/questions/model/multipla_escolha.gd" id="1_1wydh"]
+
+[resource]
+script = ExtResource("1_1wydh")
+alternativas = Array[String](["Ensinando as pessoas sobre o que se deve fazer para evitar desastres; Auxiliam no socorro de pessoas atingidas pelo desastre; Auxiliam a cidade a voltar para a normalidade.", "Organizam competições de natação  para casos de inundações e enchentes; Palestras sobre desastres; Auxiliam na reconstrução da cidade."])
+texto = "Segundo DORO et Al. (2022), a Defesa Civil trabalha antes, durante e depois de um desastres. Sabendo disso, qual  alternativa representa corretamente o trabalho da defesa civil nesses três momentos de atuação."

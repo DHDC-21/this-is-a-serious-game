@@ -1,0 +1,95 @@
+[gd_scene format=3 uid="uid://cfbaj6oxyo5fn"]
+
+[ext_resource type="Theme" uid="uid://b21v20lf4hmfr" path="res://src/resources/theme/questions.tres" id="1_1dm4x"]
+[ext_resource type="Script" uid="uid://cic4h34gela7i" path="res://src/engines/question_engine_base.gd" id="2_wciwr"]
+
+[node name="QuestionEngineBase" type="Control" unique_id=1185426554]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_1dm4x")
+script = ExtResource("2_wciwr")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1107024340]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.7772246, 0.6040752, 0.5611411, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1736262388]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=2032281320]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="EnunciadoContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=219498813]
+propagate_maximum_size = false
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="Texto" type="RichTextLabel" parent="MarginContainer/VBoxContainer/EnunciadoContainer" unique_id=257742114]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/normal_font_size = 64
+text = "Texto"
+fit_content = true
+horizontal_alignment = 3
+
+[node name="MidiaContainer" type="Panel" parent="MarginContainer/VBoxContainer/EnunciadoContainer" unique_id=1292241263]
+custom_minimum_size = Vector2(0, 600)
+layout_mode = 2
+
+[node name="Imagem" type="TextureRect" parent="MarginContainer/VBoxContainer/EnunciadoContainer/MidiaContainer" unique_id=712114561]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Video" type="VideoStreamPlayer" parent="MarginContainer/VBoxContainer/EnunciadoContainer/MidiaContainer" unique_id=746820237]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Audio" type="AudioStreamPlayer" parent="MarginContainer/VBoxContainer/EnunciadoContainer/MidiaContainer" unique_id=879580495]
+unique_name_in_owner = true
+
+[node name="Alternativas" type="VBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=1495187969]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="FeedbackPanel" type="PanelContainer" parent="MarginContainer/VBoxContainer" unique_id=800025278]
+unique_name_in_owner = true
+visible = false
+custom_minimum_size = Vector2(0, 200)
+layout_mode = 2
+
+[node name="FeedbackLabel" type="RichTextLabel" parent="MarginContainer/VBoxContainer/FeedbackPanel" unique_id=120411404]
+layout_mode = 2
+
+[node name="BotaoConfirmar" type="Button" parent="MarginContainer/VBoxContainer" unique_id=1766353192]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(400, 100)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+text = "Comfirmar"

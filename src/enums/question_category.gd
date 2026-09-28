@@ -1,6 +1,6 @@
-extends Node
+# extends Node
 class_name QuestionCategory
 
-enum QuestionCategory{
+enum QuestionCategory {
 	PLANCON,
 }

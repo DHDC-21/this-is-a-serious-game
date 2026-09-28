@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="MultiplaEscolhaModel" format=3 uid="uid://ck2onm6ul4x07"]
+
+[ext_resource type="Script" uid="uid://4u6p38cre7ym" path="res://src/resources/questions/model/multipla_escolha.gd" id="1_po3ly"]
+
+[resource]
+script = ExtResource("1_po3ly")
+alternativas = Array[String](["Chuva de granizo", "Pista molhada", "Ventania", "Falta de area verde", "Todas outras alternativas"])
+alternativa_correta = 4
+texto = "Segundo a Coordenadoria Estadual de Proteção e Defesa Civil, Desastre é um acontecimento que causa grandes estragos materiais e coloca em risco a vida de várias pessoas. Sabendo disso, quais das alternativas NÃO são considerados desastres naturais:"

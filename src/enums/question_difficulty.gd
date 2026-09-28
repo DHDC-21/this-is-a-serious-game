@@ -1,8 +1,8 @@
-extends Node
+# extends Node
 class_name QuestionDifficulty
 
 
-enum {
+enum QuestionDifficulty{
     FACIL,
     INTERMEDIARIO,
     DIFICIL,

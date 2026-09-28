@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="MultiplaEscolhaModel" format=3 uid="uid://c3bewa1f1pf7t"]
+
+[ext_resource type="Script" uid="uid://cm5l2ao6f3571" path="res://src/resources/questions/model/selecao_multipla.gd" id="1_kg4xb"]
+
+[resource]
+script = ExtResource("1_kg4xb")
+alternativas = Array[String](["Defesa Civil", "Prefeitura", "Empresas de Tecnologia", "Governo Estadual", "Órgãos de Proteção", "Instituições de Ensino Superior", "Bombeiros"])
+alternativas_corretas = Array[int]([0, 4, 6])
+texto = "Qual ou quais desses podem ser representantes do grupo de trabalho contra desastres?"

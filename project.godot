@@ -15,10 +15,6 @@ run/main_scene="uid://dpy5urktkjcul"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 config/icon="res://icon.svg"
 
-[autoload]
-
-GameState="*res://src/autoloads/game_state.gd"
-
 [display]
 
 window/size/viewport_width=1080

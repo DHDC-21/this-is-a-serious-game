@@ -8,9 +8,7 @@ func _ready() -> void:
 		popup_sair.canceled.connect(_on_popup_sair_cancelled)
 
 func _on_btn_iniciar_pressed() -> void:
-	GameState.reset_round()
-	var quiz_theme: QuizTheme = GameState.build_default_theme()
-	GameState.begin_quiz(quiz_theme)
+	pass
 
 func _on_btn_creditos_pressed() -> void:
 	return

@@ -1,19 +1,18 @@
 [gd_scene format=3 uid="uid://dpy5urktkjcul"]
 
 [ext_resource type="Script" uid="uid://bt4ptncwhialj" path="res://src/ui/menu/main_menu.gd" id="1_anfcr"]
-[ext_resource type="Theme" uid="uid://bgdmgl16esiuu" path="res://src/configs/main_menu.tres" id="1_m50lq"]
-[ext_resource type="Theme" uid="uid://hyk4wbm6pq8g" path="res://src/configs/popup_sair.tres" id="3_ewka3"]
 
 [node name="Main" type="Control" unique_id=1516892158]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_top = 1.0
+offset_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-theme = ExtResource("1_m50lq")
 script = ExtResource("1_anfcr")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=575596476]
@@ -83,7 +82,6 @@ oversampling_override = 1.0
 title = ""
 initial_position = 2
 size = Vector2i(900, 260)
-theme = ExtResource("3_ewka3")
 ok_button_text = "Sim"
 dialog_text = "Você tem certeza que deseja fechar o jogo?
 "

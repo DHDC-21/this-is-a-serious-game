@@ -1,8 +1,8 @@
-extends Node
+# extends Node
 class_name QuestionMediaType
 
 
-enum QuestionMediaType{
+enum QuestionMediaType {
 	TEXTO,
 	IMAGEM,
 	VIDEO,

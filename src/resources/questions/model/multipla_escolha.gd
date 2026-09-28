@@ -1,6 +1,7 @@
 extends QuestionModel
 class_name MultiplaEscolhaModel
 
+
 @export_category("Alternativas")
 @export var alternativas: Array[String] = []
-@export var resposta_correta: int = alternativas.size() - 1
+@export var alternativa_correta: int = 0

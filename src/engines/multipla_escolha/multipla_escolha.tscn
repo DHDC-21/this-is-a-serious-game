@@ -1,9 +1,5 @@
-[gd_scene format=3 uid="uid://cfbaj6oxyo5fn"]
+[gd_scene format=3 uid="uid://cyu0hg4gokq3k"]
 
-[node name="MultiplaEscolha" type="Control" unique_id=1185426554]
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+[ext_resource type="PackedScene" uid="uid://cfbaj6oxyo5fn" path="res://src/engines/question_engine_base.tscn" id="1_1dm4x"]
+
+[node name="MultiplaEscolha" unique_id=1185426554 instance=ExtResource("1_1dm4x")]
