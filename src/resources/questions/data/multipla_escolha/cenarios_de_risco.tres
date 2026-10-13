@@ -7,3 +7,5 @@ script = ExtResource("1_po3ly")
 alternativas = Array[String](["Chuva de granizo", "Pista molhada", "Ventania", "Falta de area verde", "Todas outras alternativas"])
 alternativa_correta = 4
 texto = "Segundo a Coordenadoria Estadual de Proteção e Defesa Civil, Desastre é um acontecimento que causa grandes estragos materiais e coloca em risco a vida de várias pessoas. Sabendo disso, quais das alternativas NÃO são considerados desastres naturais:"
+feedback_correto = "É isso mesmo!"
+feedback_incorreto = "Você errou, tente novamente..."

@@ -79,12 +79,13 @@ size_flags_vertical = 3
 
 [node name="FeedbackPanel" type="PanelContainer" parent="MarginContainer/VBoxContainer" unique_id=800025278]
 unique_name_in_owner = true
-visible = false
 custom_minimum_size = Vector2(0, 200)
 layout_mode = 2
 
 [node name="FeedbackLabel" type="RichTextLabel" parent="MarginContainer/VBoxContainer/FeedbackPanel" unique_id=120411404]
 layout_mode = 2
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="BotaoConfirmar" type="Button" parent="MarginContainer/VBoxContainer" unique_id=1766353192]
 unique_name_in_owner = true

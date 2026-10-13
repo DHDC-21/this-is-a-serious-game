@@ -1,5 +1,43 @@
 [gd_scene format=3 uid="uid://cyu0hg4gokq3k"]
 
 [ext_resource type="PackedScene" uid="uid://cfbaj6oxyo5fn" path="res://src/engines/question_engine_base.tscn" id="1_1dm4x"]
+[ext_resource type="Script" uid="uid://kt0084u7p83d" path="res://src/engines/multipla_escolha/multipla_escolha.gd" id="2_i3bb1"]
+[ext_resource type="Resource" uid="uid://ck2onm6ul4x07" path="res://src/resources/questions/data/multipla_escolha/cenarios_de_risco.tres" id="3_wptxj"]
 
 [node name="MultiplaEscolha" unique_id=1185426554 instance=ExtResource("1_1dm4x")]
+script = ExtResource("2_i3bb1")
+teste = ExtResource("3_wptxj")
+
+[node name="VBoxContainer" parent="MarginContainer" parent_id_path=PackedInt32Array(1736262388) index="0" unique_id=2032281320]
+theme_override_constants/separation = 32
+
+[node name="MidiaContainer" parent="MarginContainer/VBoxContainer/EnunciadoContainer" parent_id_path=PackedInt32Array(219498813) index="1" unique_id=1292241263]
+unique_name_in_owner = true
+
+[node name="Alternativas" parent="MarginContainer/VBoxContainer" index="1" unique_id=1495187969]
+theme_override_constants/separation = 32
+
+[node name="Button" type="Button" parent="MarginContainer/VBoxContainer/Alternativas" index="0" unique_id=1220210902]
+custom_minimum_size = Vector2(0, 100)
+propagate_maximum_size = true
+layout_mode = 2
+
+[node name="Button2" type="Button" parent="MarginContainer/VBoxContainer/Alternativas" index="1" unique_id=1993668990]
+custom_minimum_size = Vector2(0, 100)
+propagate_maximum_size = true
+layout_mode = 2
+
+[node name="Button3" type="Button" parent="MarginContainer/VBoxContainer/Alternativas" index="2" unique_id=1149384291]
+custom_minimum_size = Vector2(0, 100)
+propagate_maximum_size = true
+layout_mode = 2
+
+[node name="Button4" type="Button" parent="MarginContainer/VBoxContainer/Alternativas" index="3" unique_id=403566577]
+custom_minimum_size = Vector2(0, 100)
+propagate_maximum_size = true
+layout_mode = 2
+
+[node name="Button5" type="Button" parent="MarginContainer/VBoxContainer/Alternativas" index="4" unique_id=1625879444]
+custom_minimum_size = Vector2(0, 100)
+propagate_maximum_size = true
+layout_mode = 2
