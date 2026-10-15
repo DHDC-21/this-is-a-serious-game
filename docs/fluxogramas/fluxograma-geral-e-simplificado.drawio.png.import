@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cgd208l42uyqp"
-path="res://.godot/imported/fluxograma-resultado-final.drawio.png-6d2fee43b7c206a2de1087541000116b.ctex"
+uid="uid://dv135ntriqm7f"
+path="res://.godot/imported/fluxograma-geral-e-simplificado.drawio.png-9c78cbe3156ed08df522f87252eae3a5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://docs/fluxograma-resultado-final.drawio.png"
-dest_files=["res://.godot/imported/fluxograma-resultado-final.drawio.png-6d2fee43b7c206a2de1087541000116b.ctex"]
+source_file="res://docs/fluxogramas/fluxograma-geral-e-simplificado.drawio.png"
+dest_files=["res://.godot/imported/fluxograma-geral-e-simplificado.drawio.png-9c78cbe3156ed08df522f87252eae3a5.ctex"]
 
 [params]
 

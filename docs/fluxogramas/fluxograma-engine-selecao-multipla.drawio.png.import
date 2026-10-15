@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b0sjuuwhw5dve"
-path="res://.godot/imported/fluxograma-engine-verdadeiro-ou-falso.drawio.png-b493c0579724a7c96112e88c7441e8ea.ctex"
+uid="uid://bdcr4ng6jyoeh"
+path="res://.godot/imported/fluxograma-engine-selecao-multipla.drawio.png-615246c448dc2c6878d183385f918dbd.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://docs/fluxograma-engine-verdadeiro-ou-falso.drawio.png"
-dest_files=["res://.godot/imported/fluxograma-engine-verdadeiro-ou-falso.drawio.png-b493c0579724a7c96112e88c7441e8ea.ctex"]
+source_file="res://docs/fluxogramas/fluxograma-engine-selecao-multipla.drawio.png"
+dest_files=["res://.godot/imported/fluxograma-engine-selecao-multipla.drawio.png-615246c448dc2c6878d183385f918dbd.ctex"]
 
 [params]
 

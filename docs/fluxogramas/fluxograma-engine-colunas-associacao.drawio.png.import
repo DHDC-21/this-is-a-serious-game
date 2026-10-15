@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dv135ntriqm7f"
-path="res://.godot/imported/fluxograma-geral-e-simplificado.drawio.png-27d51a83418ad30bb1bf3e8c739c32fc.ctex"
+uid="uid://de1nlxtgotfys"
+path="res://.godot/imported/fluxograma-engine-colunas-associacao.drawio.png-752055e7cc75d92849b2bf9c71ba65e2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://docs/fluxograma-geral-e-simplificado.drawio.png"
-dest_files=["res://.godot/imported/fluxograma-geral-e-simplificado.drawio.png-27d51a83418ad30bb1bf3e8c739c32fc.ctex"]
+source_file="res://docs/fluxogramas/fluxograma-engine-colunas-associacao.drawio.png"
+dest_files=["res://.godot/imported/fluxograma-engine-colunas-associacao.drawio.png-752055e7cc75d92849b2bf9c71ba65e2.ctex"]
 
 [params]
 
