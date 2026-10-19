@@ -1,5 +1,49 @@
 [gd_scene format=3 uid="uid://pprlisblonxf"]
 
 [ext_resource type="PackedScene" uid="uid://cfbaj6oxyo5fn" path="res://src/engines/question_engine_base.tscn" id="1_6101j"]
+[ext_resource type="Script" uid="uid://e02g06t2jeuy" path="res://src/engines/selecao_multipla/selecao_multipla.gd" id="2_htlvg"]
 
 [node name="SelecaoMultipla" unique_id=1185426554 instance=ExtResource("1_6101j")]
+script = ExtResource("2_htlvg")
+
+[node name="CheckBox0" type="CheckBox" parent="MarginContainer/VBoxContainer/Alternativas" parent_id_path=PackedInt32Array(1495187969) index="0" unique_id=200186312]
+layout_mode = 2
+size_flags_vertical = 3
+offset_transform_enabled = true
+text = "lorem ipsum"
+
+[node name="CheckBox1" type="CheckBox" parent="MarginContainer/VBoxContainer/Alternativas" parent_id_path=PackedInt32Array(1495187969) index="1" unique_id=332906139]
+layout_mode = 2
+size_flags_vertical = 3
+offset_transform_enabled = true
+text = "lorem ipsum"
+
+[node name="CheckBox2" type="CheckBox" parent="MarginContainer/VBoxContainer/Alternativas" parent_id_path=PackedInt32Array(1495187969) index="2" unique_id=440135590]
+layout_mode = 2
+size_flags_vertical = 3
+offset_transform_enabled = true
+text = "lorem ipsum"
+
+[node name="CheckBox3" type="CheckBox" parent="MarginContainer/VBoxContainer/Alternativas" parent_id_path=PackedInt32Array(1495187969) index="3" unique_id=599766880]
+layout_mode = 2
+size_flags_vertical = 3
+offset_transform_enabled = true
+text = "lorem ipsum"
+
+[node name="CheckBox4" type="CheckBox" parent="MarginContainer/VBoxContainer/Alternativas" parent_id_path=PackedInt32Array(1495187969) index="4" unique_id=1253593142]
+layout_mode = 2
+size_flags_vertical = 3
+offset_transform_enabled = true
+text = "lorem ipsum"
+
+[node name="CheckBox5" type="CheckBox" parent="MarginContainer/VBoxContainer/Alternativas" parent_id_path=PackedInt32Array(1495187969) index="5" unique_id=1776883322]
+layout_mode = 2
+size_flags_vertical = 3
+offset_transform_enabled = true
+text = "lorem ipsum"
+
+[node name="CheckBox6" type="CheckBox" parent="MarginContainer/VBoxContainer/Alternativas" parent_id_path=PackedInt32Array(1495187969) index="6" unique_id=1283562448]
+layout_mode = 2
+size_flags_vertical = 3
+offset_transform_enabled = true
+text = "lorem ipsum"

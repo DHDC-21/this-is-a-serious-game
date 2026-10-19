@@ -4,6 +4,6 @@
 
 [resource]
 script = ExtResource("1_jud2u")
-alternativas = Array[String](["Enchentes", "Inundações", "Queimadas", "Tsunamis", "Furacões", "Contaminação Química"])
+alternativas = Array[String](["Enchentes", "Inundações", "Queimadas", "Tsunamis", "Furacôes", "Contaminação Química"])
 alternativas_corretas = Array[int]([0, 1, 2])
 texto = "Selecione quais desastres são os mais comuns no município de Mogi Mirim:"

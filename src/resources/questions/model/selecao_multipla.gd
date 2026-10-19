@@ -1,5 +1,5 @@
 extends QuestionModel
-class_name MultiplaEscolhaModel
+class_name SelecaoMultiplaModel
 
 
 @export_category("Alternativas")

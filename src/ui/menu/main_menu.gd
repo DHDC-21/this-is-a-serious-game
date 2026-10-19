@@ -2,13 +2,17 @@ extends Control
 
 @onready var popup_sair = %PopupSair
 
+@export var fases: Array[QuestionModel] = []
+
+
 func _ready() -> void:
 	if popup_sair != null:
 		popup_sair.confirmed.connect(_on_popup_sair_confirmed)
 		popup_sair.canceled.connect(_on_popup_sair_cancelled)
 
 func _on_btn_iniciar_pressed() -> void:
-	pass
+	print("Botão iniciar pressionado! Carregando as fases no GameController...")
+	GameController.start_game(fases)
 
 func _on_btn_creditos_pressed() -> void:
 	return

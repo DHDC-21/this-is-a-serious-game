@@ -1,4 +1,5 @@
-extends Node
+extends QuestionEngineBase
+class_name SelecaoMultiplaEngine
 
 
 # Called when the node enters the scene tree for the first time.

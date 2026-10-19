@@ -12,6 +12,10 @@ func _on_ready() -> void:
 		pergunta = teste
 
 func _construir_as_alternativas() -> void:
+	if pergunta == null or pergunta.alternativas.size() == 0:
+		print("Erro: A pergunta não possui alternativas definidas!")
+		return
+
 	botoes.clear()
 
 	for botao in alternativas.get_children():

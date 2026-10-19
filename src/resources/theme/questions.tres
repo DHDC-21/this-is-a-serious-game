@@ -2,6 +2,8 @@
 
 [resource]
 Button/font_sizes/font_size = 32
+CheckBox/constants/h_separation = 32
+CheckBox/font_sizes/font_size = 32
 MarginContainer/constants/margin_bottom = 64
 MarginContainer/constants/margin_left = 64
 MarginContainer/constants/margin_right = 64

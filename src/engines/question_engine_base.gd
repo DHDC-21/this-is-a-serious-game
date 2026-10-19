@@ -28,14 +28,19 @@ var _confirmar: = false
 # Função chamada quando o nó é adicionado à cena
 func _ready() -> void:
 	botao_confirmar.pressed.connect(_on_botao_confirmar_pressed)
+
 	_on_ready()
+
+	if pergunta == null:
+		# Pega a pergunta atual do GameController usando o índice atual
+		pergunta = GameController.fases[GameController.index_atual]
 	carregar_pergunta(pergunta)
 
 
 func _on_ready() -> void:
 	# Esta função pode ser sobrescrita nas classes filhas para inicializações específicas
 	pass
-	
+
 func gerar_indices_randomizados(quantidade: int) -> Array:
 	var indices = []
 	for i in range(quantidade):
@@ -111,6 +116,8 @@ func _on_botao_confirmar_pressed() -> void:
 	else:
 		# Quando já confirmou e clicou em "Próxima"
 		answered.emit(_last_correct, pergunta.pontuacao_base if _last_correct else 0)
+
+		GameController.carregar_proxima_pergunta()
 
 
 # Função para construir as alternativas de resposta

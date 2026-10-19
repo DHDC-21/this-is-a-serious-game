@@ -14,5 +14,5 @@ class_name QuestionModel
 @export var pontuacao_base: int = 200
 
 @export_category("Feedback")
-@export var feedback_correto: String
-@export var feedback_incorreto: String
+@export var feedback_correto: String = "Parabéns, sua resposta está correta!"
+@export var feedback_incorreto: String = "Que pena, sua resposta está incorreta! Tente novamente."
