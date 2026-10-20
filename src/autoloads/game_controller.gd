@@ -28,16 +28,19 @@ func carregar_pergunta_atual() -> void:
 	var pergunta_atual = fases[index_atual]
 	var caminho_da_engine: String = ""
 
-	match pergunta_atual:
-		MultiplaEscolhaModel:
-			caminho_da_engine = "res://src/engines/multipla_escolha/multipla_escolha.tscn"
+	if pergunta_atual is MultiplaEscolhaModel:
+		caminho_da_engine = "res://src/engines/multipla_escolha/multipla_escolha.tscn"
 
-		SelecaoMultiplaModel:
-			caminho_da_engine = "res://src/engines/selecao_multipla/selecao_multipla.tscn"
+	elif pergunta_atual is SelecaoMultiplaModel:
+		caminho_da_engine = "res://src/engines/selecao_multipla/selecao_multipla.tscn"
 
-		_:
-			print("Erro: Tipo de pergunta não suportado: ", pergunta_atual)
-			return
+
+	elif pergunta_atual is VerdadeiroOuFalsoModel:
+		caminho_da_engine = "res://src/engines/verdadeiro_falso/verdadeiro_falso.tscn"
+
+	else:
+		print("Erro: Tipo de pergunta não suportado: ", pergunta_atual)
+		return
 
 	print("Carregando engine: ", caminho_da_engine)
 	get_tree().change_scene_to_file(caminho_da_engine)
