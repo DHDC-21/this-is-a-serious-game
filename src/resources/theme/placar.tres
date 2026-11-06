@@ -1,0 +1,11 @@
+[gd_resource type="Theme" format=3 uid="uid://bkj6wiu4q7nlh"]
+
+[resource]
+default_font_size = 48
+HBoxContainer/constants/separation = 32
+HSeparator/constants/separation = 128
+Label/font_sizes/titulo = 64
+MarginContainer/constants/margin_bottom = 256
+MarginContainer/constants/margin_left = 64
+MarginContainer/constants/margin_right = 64
+MarginContainer/constants/margin_top = 256

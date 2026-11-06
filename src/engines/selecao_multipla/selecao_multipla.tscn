@@ -5,6 +5,7 @@
 
 [node name="SelecaoMultipla" unique_id=1185426554 instance=ExtResource("1_6101j")]
 script = ExtResource("2_htlvg")
+teste = null
 
 [node name="CheckBox0" type="CheckBox" parent="MarginContainer/VBoxContainer/Alternativas" parent_id_path=PackedInt32Array(1495187969) index="0" unique_id=200186312]
 layout_mode = 2

@@ -17,18 +17,38 @@ func _construir_as_alternativas() -> void:
 		return
 
 	checkbox.clear()
-
+	
+	# Pega todos os botões iniciais
 	for check in alternativas.get_children():
-		checkbox.append(check)
+		if check is Button:
+			checkbox.append(check)
 
-	var indices = gerar_indices_randomizados(pergunta.alternativas.size())
+	var qtd_alternativas = pergunta.alternativas.size()
+	
+	# Se houver mais alternativas do que botões, criamos novos
+	if qtd_alternativas > checkbox.size():
+		var botao_modelo = checkbox[0] # Usa o primeiro botão como modelo
+		for i in range(checkbox.size(), qtd_alternativas):
+			var novo_botao = botao_modelo.duplicate()
+			alternativas.add_child(novo_botao)
+			checkbox.append(novo_botao)
+
+	var indices = gerar_indices_randomizados(qtd_alternativas)
 
 	for i in range(checkbox.size()):
-		var indice_da_vez = indices[i]
-
-		checkbox[i].text = pergunta.alternativas[indice_da_vez]
-		checkbox[i].set_meta("indice_original", indice_da_vez)
-		checkbox[i].pressed.connect(resposta_do_checkbox.bind(checkbox[i]))
+		if i < qtd_alternativas:
+			var indice_da_vez = indices[i]
+			checkbox[i].text = pergunta.alternativas[indice_da_vez]
+			checkbox[i].set_meta("indice_original", indice_da_vez)
+			
+			# Limpa conexões antigas para evitar duplicidade ao reutilizar botões
+			for connection in checkbox[i].pressed.get_connections():
+				checkbox[i].pressed.disconnect(connection.callable)
+				
+			checkbox[i].pressed.connect(resposta_do_checkbox.bind(checkbox[i]))
+			checkbox[i].visible = true
+		else:
+			checkbox[i].visible = false
 
 func resposta_do_checkbox(check: Button) -> void:
 	if not _confirmar:

@@ -52,3 +52,4 @@ func carregar_proxima_pergunta() -> void:
 		carregar_pergunta_atual()
 	else:
 		print("Fim do jogo! Todas as perguntas foram respondidas.")
+		get_tree().change_scene_to_file("res://src/ui/placar/placar.tscn")

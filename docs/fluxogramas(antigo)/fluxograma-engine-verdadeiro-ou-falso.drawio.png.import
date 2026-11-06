@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://de1nlxtgotfys"
-path="res://.godot/imported/fluxograma-engine-colunas-associacao.drawio.png-752055e7cc75d92849b2bf9c71ba65e2.ctex"
+uid="uid://b0sjuuwhw5dve"
+path="res://.godot/imported/fluxograma-engine-verdadeiro-ou-falso.drawio.png-1f28446be4b88eb9ea61874a49b9a62f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://docs/fluxogramas/fluxograma-engine-colunas-associacao.drawio.png"
-dest_files=["res://.godot/imported/fluxograma-engine-colunas-associacao.drawio.png-752055e7cc75d92849b2bf9c71ba65e2.ctex"]
+source_file="res://docs/fluxogramas(antigo)/fluxograma-engine-verdadeiro-ou-falso.drawio.png"
+dest_files=["res://.godot/imported/fluxograma-engine-verdadeiro-ou-falso.drawio.png-1f28446be4b88eb9ea61874a49b9a62f.ctex"]
 
 [params]
 
