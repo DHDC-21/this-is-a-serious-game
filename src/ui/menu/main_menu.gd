@@ -4,11 +4,13 @@ extends Control
 
 @export var fases: Array[QuestionModel] = []
 
-
 func _ready() -> void:
 	if popup_sair != null:
 		popup_sair.confirmed.connect(_on_popup_sair_confirmed)
 		popup_sair.canceled.connect(_on_popup_sair_cancelled)
+
+	%Music.play()
+
 
 func _on_btn_iniciar_pressed() -> void:
 	print("Botão iniciar pressionado! Carregando as fases no GameController...")
@@ -29,3 +31,7 @@ func _on_popup_sair_confirmed() -> void:
 func _on_popup_sair_cancelled() -> void:
 	if popup_sair != null:
 		popup_sair.hide()
+
+
+func _on_audio_stream_player_finished() -> void:
+	%Music.play()  # Reinicia a música quando terminar

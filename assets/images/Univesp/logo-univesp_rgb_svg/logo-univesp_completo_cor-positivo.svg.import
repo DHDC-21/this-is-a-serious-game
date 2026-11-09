@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://qc72oqf6sc6h"
-path="res://.godot/imported/marca_sedec.png-79845dcf2d1bcae63f2533d6f1e54fdb.ctex"
+uid="uid://c0w2xx6yi02it"
+path="res://.godot/imported/logo-univesp_completo_cor-positivo.svg-c7861b4b1ca79e404869c9dc986fac17.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/images/marca_sedec.png"
-dest_files=["res://.godot/imported/marca_sedec.png-79845dcf2d1bcae63f2533d6f1e54fdb.ctex"]
+source_file="res://assets/images/Univesp/logo-univesp_rgb_svg/logo-univesp_completo_cor-positivo.svg"
+dest_files=["res://.godot/imported/logo-univesp_completo_cor-positivo.svg-c7861b4b1ca79e404869c9dc986fac17.ctex"]
 
 [params]
 
@@ -38,3 +38,6 @@ process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
 detect_3d/compress_to=1
+svg/scale=1.0
+editor/scale_with_editor_scale=false
+editor/convert_colors_with_editor_theme=false

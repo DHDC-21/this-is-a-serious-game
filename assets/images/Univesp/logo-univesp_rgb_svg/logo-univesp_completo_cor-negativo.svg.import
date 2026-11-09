@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://byiype3n87ifo"
-path="res://.godot/imported/Univesp_logo_png_rgb.png-9a7b2823bbff2e51cdbc3ae5bc611d41.ctex"
+uid="uid://bj03sj8hdkssh"
+path="res://.godot/imported/logo-univesp_completo_cor-negativo.svg-67af042934e56ac2590ae7d4b194ccb4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/images/Univesp_logo_png_rgb.png"
-dest_files=["res://.godot/imported/Univesp_logo_png_rgb.png-9a7b2823bbff2e51cdbc3ae5bc611d41.ctex"]
+source_file="res://assets/images/Univesp/logo-univesp_rgb_svg/logo-univesp_completo_cor-negativo.svg"
+dest_files=["res://.godot/imported/logo-univesp_completo_cor-negativo.svg-67af042934e56ac2590ae7d4b194ccb4.ctex"]
 
 [params]
 
@@ -38,3 +38,6 @@ process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
 detect_3d/compress_to=1
+svg/scale=1.0
+editor/scale_with_editor_scale=false
+editor/convert_colors_with_editor_theme=false

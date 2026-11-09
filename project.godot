@@ -10,10 +10,10 @@ config_version=5
 
 [application]
 
-config/name="This is serious game"
+config/name="PlanconGameQuiz"
 run/main_scene="uid://dpy5urktkjcul"
 config/features=PackedStringArray("4.7", "GL Compatibility")
-config/icon="res://icon.svg"
+config/icon="uid://sthvp4x880t1"
 
 [autoload]
 
@@ -23,8 +23,6 @@ GameController="*uid://nufrgig4c3x2"
 
 window/size/viewport_width=1980
 window/size/viewport_height=1080
-window/size/window_width_override=720
-window/size/window_height_override=1280
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
 
@@ -39,7 +37,7 @@ enabled=PackedStringArray()
 [gui]
 
 theme/custom="uid://b2cv6kuhiv3pp"
-theme/custom_font="res://assets/fonts/Nunito/Nunito-VariableFont_wght.ttf"
+theme/custom_font="uid://b5rq85dglg3q3"
 
 [input]
 

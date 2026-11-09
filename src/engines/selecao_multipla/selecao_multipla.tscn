@@ -2,49 +2,75 @@
 
 [ext_resource type="PackedScene" uid="uid://cfbaj6oxyo5fn" path="res://src/engines/question_engine_base.tscn" id="1_6101j"]
 [ext_resource type="Script" uid="uid://e02g06t2jeuy" path="res://src/engines/selecao_multipla/selecao_multipla.gd" id="2_htlvg"]
+[ext_resource type="Resource" uid="uid://c2h1gjrdlhm0n" path="res://src/resources/questions/data/selecao_multipla/plancon_etapa_1/cenarios_de_risco_em_mogi_mirm.tres" id="3_62k0l"]
 
 [node name="SelecaoMultipla" unique_id=1185426554 instance=ExtResource("1_6101j")]
 script = ExtResource("2_htlvg")
-teste = null
+teste = ExtResource("3_62k0l")
 
-[node name="CheckBox0" type="CheckBox" parent="MarginContainer/VBoxContainer/Alternativas" parent_id_path=PackedInt32Array(1495187969) index="0" unique_id=200186312]
-layout_mode = 2
+[node name="EnunciadoContainer" parent="MarginContainer/Jogo/EnunciadoAlternativas" parent_id_path=PackedInt32Array(9809959) index="0" unique_id=219498813]
+size_flags_vertical = 4
+
+[node name="MidiaContainer" parent="MarginContainer/Jogo/EnunciadoAlternativas/EnunciadoContainer" index="1" unique_id=1292241263]
 size_flags_vertical = 3
+
+[node name="Alternativas" parent="MarginContainer/Jogo/EnunciadoAlternativas" parent_id_path=PackedInt32Array(9809959) index="1" unique_id=1495187969]
+size_flags_vertical = 4
+
+[node name="CheckBox0" type="CheckBox" parent="MarginContainer/Jogo/EnunciadoAlternativas/Alternativas" index="0" unique_id=200186312]
+custom_minimum_size = Vector2(600, 64)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+text = "lorem ipsum"
+
+[node name="CheckBox1" type="CheckBox" parent="MarginContainer/Jogo/EnunciadoAlternativas/Alternativas" index="1" unique_id=332906139]
+custom_minimum_size = Vector2(600, 64)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
 offset_transform_enabled = true
 text = "lorem ipsum"
 
-[node name="CheckBox1" type="CheckBox" parent="MarginContainer/VBoxContainer/Alternativas" parent_id_path=PackedInt32Array(1495187969) index="1" unique_id=332906139]
+[node name="CheckBox2" type="CheckBox" parent="MarginContainer/Jogo/EnunciadoAlternativas/Alternativas" index="2" unique_id=440135590]
+custom_minimum_size = Vector2(600, 64)
 layout_mode = 2
-size_flags_vertical = 3
+size_flags_horizontal = 4
+size_flags_vertical = 4
 offset_transform_enabled = true
 text = "lorem ipsum"
 
-[node name="CheckBox2" type="CheckBox" parent="MarginContainer/VBoxContainer/Alternativas" parent_id_path=PackedInt32Array(1495187969) index="2" unique_id=440135590]
+[node name="CheckBox3" type="CheckBox" parent="MarginContainer/Jogo/EnunciadoAlternativas/Alternativas" index="3" unique_id=599766880]
+custom_minimum_size = Vector2(600, 64)
 layout_mode = 2
-size_flags_vertical = 3
+size_flags_horizontal = 4
+size_flags_vertical = 4
 offset_transform_enabled = true
 text = "lorem ipsum"
 
-[node name="CheckBox3" type="CheckBox" parent="MarginContainer/VBoxContainer/Alternativas" parent_id_path=PackedInt32Array(1495187969) index="3" unique_id=599766880]
+[node name="CheckBox4" type="CheckBox" parent="MarginContainer/Jogo/EnunciadoAlternativas/Alternativas" index="4" unique_id=1253593142]
+custom_minimum_size = Vector2(600, 64)
 layout_mode = 2
-size_flags_vertical = 3
+size_flags_horizontal = 4
+size_flags_vertical = 4
 offset_transform_enabled = true
 text = "lorem ipsum"
 
-[node name="CheckBox4" type="CheckBox" parent="MarginContainer/VBoxContainer/Alternativas" parent_id_path=PackedInt32Array(1495187969) index="4" unique_id=1253593142]
+[node name="CheckBox5" type="CheckBox" parent="MarginContainer/Jogo/EnunciadoAlternativas/Alternativas" index="5" unique_id=1776883322]
+custom_minimum_size = Vector2(600, 64)
 layout_mode = 2
-size_flags_vertical = 3
+size_flags_horizontal = 4
+size_flags_vertical = 4
 offset_transform_enabled = true
 text = "lorem ipsum"
 
-[node name="CheckBox5" type="CheckBox" parent="MarginContainer/VBoxContainer/Alternativas" parent_id_path=PackedInt32Array(1495187969) index="5" unique_id=1776883322]
+[node name="CheckBox6" type="CheckBox" parent="MarginContainer/Jogo/EnunciadoAlternativas/Alternativas" index="6" unique_id=1283562448]
+custom_minimum_size = Vector2(600, 64)
 layout_mode = 2
-size_flags_vertical = 3
+size_flags_horizontal = 4
+size_flags_vertical = 4
 offset_transform_enabled = true
 text = "lorem ipsum"
 
-[node name="CheckBox6" type="CheckBox" parent="MarginContainer/VBoxContainer/Alternativas" parent_id_path=PackedInt32Array(1495187969) index="6" unique_id=1283562448]
-layout_mode = 2
-size_flags_vertical = 3
-offset_transform_enabled = true
-text = "lorem ipsum"
+[node name="FeedbackPanel" parent="MarginContainer/Jogo" parent_id_path=PackedInt32Array(2032281320) index="1" unique_id=800025278]
+visible = false

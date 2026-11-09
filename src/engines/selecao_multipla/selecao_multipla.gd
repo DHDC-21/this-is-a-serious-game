@@ -13,20 +13,26 @@ func _on_ready() -> void:
 
 func _construir_as_alternativas() -> void:
 	if pergunta == null or pergunta.alternativas.size() == 0:
-		print("Erro: A pergunta não possui alternativas definidas!")
+		push_error("A pergunta não possui alternativas definidas.")
+		for check in alternativas.get_children():
+			check.visible = false
 		return
 
 	checkbox.clear()
-	
+
 	# Pega todos os botões iniciais
 	for check in alternativas.get_children():
 		if check is Button:
 			checkbox.append(check)
 
 	var qtd_alternativas = pergunta.alternativas.size()
-	
+
 	# Se houver mais alternativas do que botões, criamos novos
 	if qtd_alternativas > checkbox.size():
+		if checkbox.is_empty():
+			push_error("Não há um CheckBox disponível para servir de modelo.")
+			return
+
 		var botao_modelo = checkbox[0] # Usa o primeiro botão como modelo
 		for i in range(checkbox.size(), qtd_alternativas):
 			var novo_botao = botao_modelo.duplicate()
@@ -34,12 +40,19 @@ func _construir_as_alternativas() -> void:
 			checkbox.append(novo_botao)
 
 	var indices = gerar_indices_randomizados(qtd_alternativas)
+	indices_respostas_selecionadas.clear()
 
 	for i in range(checkbox.size()):
 		if i < qtd_alternativas:
 			var indice_da_vez = indices[i]
 			checkbox[i].text = pergunta.alternativas[indice_da_vez]
 			checkbox[i].set_meta("indice_original", indice_da_vez)
+			checkbox[i].autowrap_mode = TextServer.AUTOWRAP_WORD
+			checkbox[i].custom_minimum_size.y = 60
+			checkbox[i].size_flags_horizontal = Control.SIZE_EXPAND_FILL
+			checkbox[i].button_pressed = false
+			checkbox[i].set_disabled(false)
+			checkbox[i].modulate = cor_normal
 			
 			# Limpa conexões antigas para evitar duplicidade ao reutilizar botões
 			for connection in checkbox[i].pressed.get_connections():
