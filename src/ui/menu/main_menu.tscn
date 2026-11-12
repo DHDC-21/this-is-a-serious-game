@@ -4,7 +4,9 @@
 [ext_resource type="Script" uid="uid://b1eqx1ow1urfc" path="res://src/resources/questions/model/_question_model.gd" id="2_tar7q"]
 [ext_resource type="Resource" uid="uid://ck2onm6ul4x07" path="res://src/resources/questions/data/multipla_escolha/plancon_etapa_1/nao_sao_desastres_naturais.tres" id="3_tar7q"]
 [ext_resource type="Resource" uid="uid://c3bewa1f1pf7t" path="res://src/resources/questions/data/selecao_multipla/plancon_etapa_1/representantes_do_grupo_de_trabalho.tres" id="4_fioea"]
+[ext_resource type="Texture2D" uid="uid://qc72oqf6sc6h" path="res://assets/images/Defesa_Civil/marca_sedec.png" id="5_4ty6e"]
 [ext_resource type="AudioStream" uid="uid://ddynu4okb4kt1" path="res://assets/audio/background_music/sergequadrado-funky-and-jazzy-gang-loop-251858.mp3" id="5_tar7q"]
+[ext_resource type="Texture2D" uid="uid://sthvp4x880t1" path="res://assets/images/Univesp/logo-univesp_rgb_svg/logo-univesp_simplificado_cor-positivo.svg" id="6_py4bp"]
 
 [node name="Main" type="Control" unique_id=1516892158]
 layout_mode = 3
@@ -98,6 +100,30 @@ dialog_text = "Você tem certeza que deseja fechar o jogo?
 "
 dialog_autowrap = true
 cancel_button_text = "Não"
+
+[node name="Logos" type="HBoxContainer" parent="Margem/HBoxContainer" unique_id=961185740]
+propagate_maximum_size = false
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 8
+accessibility_region = true
+alignment = 2
+
+[node name="DefesaCivil" type="TextureRect" parent="Margem/HBoxContainer/Logos" unique_id=1872189155]
+custom_minimum_size = Vector2(0, 200)
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 8
+texture = ExtResource("5_4ty6e")
+expand_mode = 3
+
+[node name="Univesp" type="TextureRect" parent="Margem/HBoxContainer/Logos" unique_id=225638551]
+custom_minimum_size = Vector2(0, 200)
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 8
+texture = ExtResource("6_py4bp")
+expand_mode = 3
 
 [node name="Music" type="AudioStreamPlayer" parent="." unique_id=582807670]
 unique_name_in_owner = true
